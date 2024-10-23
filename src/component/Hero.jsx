@@ -1,6 +1,6 @@
 import React, { useRef } from 'react';
-import { motion, useInView } from 'framer-motion'; // Importing necessary modules from Framer Motion
-import Swal from 'sweetalert2'; // Import SweetAlert2
+import { motion, useInView } from 'framer-motion';
+import Swal from 'sweetalert2';
 import GUB from '../assets/GUB.jpg'; // Image of Rafiul
 import Resume from '../assets/Rafiul Hoque.pdf'; // Link to the resume
 
@@ -12,20 +12,46 @@ const Hero = () => {
   // Function to handle download and show SweetAlert
   const handleDownload = (e) => {
     e.preventDefault(); // Prevent the default anchor click behavior
-    Swal.fire({
-      title: 'Download complete!',
-      text: 'Your resume is being downloaded.',
-      icon: 'success',
-      confirmButtonText: 'Okay'
-    });
 
-    // Programmatically trigger the download
-    const link = document.createElement('a');
-    link.href = Resume;
-    link.download = 'Rafiul_Hoque_Resume.pdf';
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
+    // Customizing SweetAlert with HTML and buttons
+    Swal.fire({
+      title: 'Success!',
+      html: `
+        <div style="text-align: center;">
+          <p>Rafiul's CV is being downloaded.</p>
+          <p style="margin: 10px 0;"><strong>Rafiul Hoque</strong></p>
+          <img src="${GUB}" alt="Rafiul Hoque" style="width: 100px; border-radius: 50%; border: 2px solid #4CAF50;" />
+          <p>Thank you</p>
+        </div>
+      `,
+      icon: 'success',
+      showConfirmButton: false,
+      timer: 3000, // Alert will disappear after 3 seconds
+      backdrop: `
+        rgba(0,0,123,0.4)
+        url("../assets/download.gif")
+        left top
+        no-repeat
+      `,
+      willOpen: () => {
+        Swal.showLoading();
+      },
+      didOpen: () => {
+        // Programmatically trigger the download
+        const link = document.createElement('a');
+        link.href = Resume;
+        link.download = 'Rafiul_Hoque_Resume.pdf';
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+      },
+      customClass: {
+        title: 'swal-title',
+        html: 'swal-html',
+        popup: 'swal-popup',
+        confirmButton: 'swal-confirm'
+      },
+    });
   };
 
   return (
@@ -38,10 +64,24 @@ const Hero = () => {
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.5 }}
         >
-          <h2 className='pb-2 text-4xl tracking-tighter'>Rafiul Hoque</h2>
-          <span className='bg-gradient-to-r from-stone-300 to-stone-600 bg-clip-text text-3xl tracking-tight text-transparent'>
+          <motion.h2
+            className="pb-2 text-4xl tracking-tighter"
+            initial={{ opacity: 0, y: 50 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+          >
+            Rafiul Hoque
+          </motion.h2>
+
+          {/* Animated Subtitle */}
+          <motion.span
+            className="bg-gradient-to-r from-stone-300 to-stone-600 bg-clip-text text-3xl tracking-tight text-transparent"
+            initial={{ opacity: 0, y: 50 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.2 }} // Delay for staggered effect
+          >
             Machine Learning Engineer
-          </span>
+          </motion.span>
 
           <motion.p
             ref={ref} // Attach the ref to the paragraph

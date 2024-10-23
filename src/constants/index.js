@@ -39,13 +39,7 @@ export const PROJECTS = [
       "A personal portfolio website showcasing projects, skills, and contact information.",
     technologies: ["HTML", "CSS", "React", "Bootstrap"],
   },
-  {
-    title: "Blogging Platform",
-    image: project4,
-    description:
-      "A platform for creating and publishing blog posts, with features like rich text editing, commenting, and user profiles.",
-    technologies: ["HTML", "CSS", "Vue.js", "Express", "mySQL"],
-  },
+  
 ];
 
 export const CONTACT = {
@@ -117,20 +111,13 @@ export const EDUCATION = [
 // Education Reference data array
 export const EDUCATION_REFERENCES = [
   {
-    name: "Dr. Jane Smith",
+    name: "Mr x",
     position: "Professor of Computer Science",
     institution: "University of Technology",
     contact: "jane.smith@unitech.edu",
     relationship: "Academic Advisor",
   },
-  {
-    name: "Mr. John Doe",
-    position: "Senior Software Engineer",
-    institution: "Tech Innovations Inc.",
-    contact: "john.doe@techinnovations.com",
-    relationship: "Project Mentor",
-  },
-  // Add more references as needed
+  
 ];
 
 
@@ -145,15 +132,6 @@ export const ACTIVITIES = [
     description: "Organized a local community clean-up day, engaging residents in improving their neighborhood.",
     technologies: ["Community Engagement", "Event Planning", "Team Coordination"],
   },
-  {
-    title: "Coding Bootcamp Mentor",
-    description: "Mentored participants in a 12-week coding bootcamp, helping them develop web applications.",
-    technologies: ["JavaScript", "React", "Node.js"],
-  },
-  {
-    title: "Volunteer at Local Library",
-    description: "Assisted with organizing community events and managing library resources.",
-    technologies: ["Organizational Skills", "Public Speaking"],
-  },
-  // Add more activities as needed
+  
+  
 ];

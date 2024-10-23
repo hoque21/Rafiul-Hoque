@@ -46,6 +46,14 @@ const Activities = () => {
             </motion.div>
           );
         })}
+       <motion.p
+        className='text-4xl font-bold text-white'
+        initial={{ opacity: 0, y: -20 }} // Start hidden and slightly above
+        animate={{ opacity: 1, y: 0 }} // Animate to visible and original position
+        transition={{ duration: 0.8, ease: 'easeInOut' }} // Duration and easing
+      >
+        Coming Soon
+      </motion.p>
       </div>
     </div>
   );
