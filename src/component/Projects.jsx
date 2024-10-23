@@ -63,7 +63,9 @@ const Projects = () => {
                   animate={{ opacity: 1 }}
                   transition={{ duration: 0.5, delay: index * 0.4 }}
                 >
-                  {project.title}
+                  <a href={project.link} target="_blank" rel="noopener noreferrer">
+                    {project.title}
+                  </a>
                 </motion.h3>
 
                 {/* Project Description */}
@@ -97,14 +99,15 @@ const Projects = () => {
             </motion.div>
           );
         })}
+
         <motion.p
-        className='text-4xl font-bold text-white'
-        initial={{ opacity: 0, y: -20 }} // Start hidden and slightly above
-        animate={{ opacity: 1, y: 0 }} // Animate to visible and original position
-        transition={{ duration: 0.8, ease: 'easeInOut' }} // Duration and easing
-      >
-        Coming Soon
-      </motion.p>
+          className='text-4xl font-bold text-white'
+          initial={{ opacity: 0, y: -20 }} // Start hidden and slightly above
+          animate={{ opacity: 1, y: 0 }} // Animate to visible and original position
+          transition={{ duration: 0.8, ease: 'easeInOut' }} // Duration and easing
+        >
+          Coming Soon
+        </motion.p>
       </div>
     </div>
   );
