@@ -9,42 +9,42 @@ const Navbar = ({ scrollToSection, refs }) => {
     <nav className="flex justify-between items-center py-6 px-4 bg-transparent">
       {/* Social Media Icons */}
       <div className="flex items-center gap-6 text-3xl">
-        <motion.a
-          href="https://github.com/hoque21"
-          target="_blank"
-          rel="noopener noreferrer"
-          aria-label="GitHub"
-          whileHover={{ scale: 1.2, rotate: 10 }}
-          whileTap={{ scale: 0.9 }}
-          transition={{ type: "spring", stiffness: 300 }}
-        >
-          <FaGithub />
-        </motion.a>
+      <motion.a
+        href="https://github.com/hoque21"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="GitHub"
+        whileHover={{ scale: 1.3, rotate: 10, transition: { duration: 0.2 } }}
+        whileTap={{ scale: 0.9, rotate: -10, transition: { duration: 0.1 } }}
+        transition={{ type: "spring", stiffness: 300 }}
+      >
+        <FaGithub />
+      </motion.a>
 
-        <motion.a
-          href="mailto:rafiulhoque21@gmail.com"
-          target="_blank"
-          rel="noopener noreferrer"
-          aria-label="Gmail"
-          whileHover={{ scale: 1.2, rotate: 10 }}
-          whileTap={{ scale: 0.9 }}
-          transition={{ type: "spring", stiffness: 300 }}
-        >
-          <FaEnvelope />
-        </motion.a>
+      <motion.a
+        href="mailto:rafiulhoque21@gmail.com"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Gmail"
+        whileHover={{ scale: 1.3, rotate: 10, transition: { duration: 0.2 } }}
+        whileTap={{ scale: 0.9, rotate: -10, transition: { duration: 0.1 } }}
+        transition={{ type: "spring", stiffness: 300 }}
+      >
+        <FaEnvelope />
+      </motion.a>
 
-        <motion.a
-          href="https://wa.me/8801712075433"
-          target="_blank"
-          rel="noopener noreferrer"
-          aria-label="WhatsApp"
-          whileHover={{ scale: 1.2, rotate: 10 }}
-          whileTap={{ scale: 0.9 }}
-          transition={{ type: "spring", stiffness: 300 }}
-        >
-          <FaWhatsapp />
-        </motion.a>
-      </div>
+      <motion.a
+        href="https://wa.me/8801712075433"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="WhatsApp"
+        whileHover={{ scale: 1.3, rotate: 10, transition: { duration: 0.2 } }}
+        whileTap={{ scale: 0.9, rotate: -10, transition: { duration: 0.1 } }}
+        transition={{ type: "spring", stiffness: 300 }}
+      >
+        <FaWhatsapp />
+      </motion.a>
+    </div>
 
       {/* Hamburger Menu for Mobile */}
       <div className="block lg:hidden">

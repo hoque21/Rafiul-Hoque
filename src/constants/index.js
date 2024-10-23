@@ -91,7 +91,7 @@ export const EDUCATION = [
     degree: "Bachelor of Science in Computer Science",
     institution: "Green University Of Bangladesh",
     year: "2020 - 2024",
-    description: "Description : Focused on software development, data structures, and algorithms.",
+    description: "Description : Focused on software development, data structures and Machine Learning.",
   },
   {
     degree: "Higher Secondary Certificate",
@@ -100,7 +100,7 @@ export const EDUCATION = [
   },
   {
     degree: " Secondary School Certificate",
-    institution: "Liaquat ali smriti school and college",
+    institution: "Liaquat Ali Smriti School and College",
     year: "2012 - 2017",
   },
   
