@@ -37,7 +37,15 @@ const Publication = () => {
               {/* Publication Title */}
               <h3 className="text-xl font-semibold">{pub.title}</h3>
               <p className="mt-2">
-                <strong>Journal Name:</strong> {pub.journalName} {/* Journal name */}
+                <strong>Journal Name:</strong> 
+                <a 
+                  href={pub.journalLink} // Link to the journal
+                  target="_blank" // Opens the link in a new tab
+                  rel="noopener noreferrer" // Security measures for external links
+                  className="text-blue-500 hover:underline" // Styling for the link
+                >
+                  {pub.journalName}
+                </a>
               </p>
               <p className="mt-2">
                 <strong>Technologies Used:</strong> {pub.technologies.join(", ")} {/* Technologies */}

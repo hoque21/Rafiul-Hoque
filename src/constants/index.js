@@ -57,12 +57,14 @@ export const PUBLICATION = [
   {
     title: `Depressive and Suicidal Text-Based Sentiment Analysis In Bangla Using Deep Learning Models.`,
     journalName: 'Business & IT',
+    journalLink: "https://bit.fsv.cvut.cz/",
     technologies: ["Python", "Natural Language Processing Toolkit",],
     status: 'Submitted and under review', // Add status field
   },
   {
     title: `Transformer-Based Sentiment Analysis for Classification Non-depressive and Suicidal Thought in Bangla Text.`,
     journalName: 'Heliyon',
+    journalLink: "https://www.cell.com/heliyon/home",
     technologies: ["Python", "Natural Language Processing Toolkit",],
     status: 'Submitted and under review', // Add status field
   },
