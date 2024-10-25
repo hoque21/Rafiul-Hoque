@@ -1,4 +1,3 @@
-// App.js
 import { useRef } from 'react';
 import Navbar from './component/Navbar';
 import Hero from './component/Hero';
@@ -9,8 +8,10 @@ import Publication from './component/Publication';
 import Research from './component/Research';
 import Education from './component/Education';
 import Reference from './component/Reference';
-import Activities from './component/Activities'; // Import Activities
+import Activities from './component/Activities'; 
 import Contract from './component/Contract';
+import Interests from './component/Interest';
+
 
 
 const App = () => {
@@ -23,10 +24,10 @@ const App = () => {
   const researchRef = useRef(null);
   const educationRef = useRef(null);
   const referenceRef = useRef(null);
-  const activitiesRef = useRef(null); // Activities ref
-  const contractsRef = useRef(null); // New ref for Contracts
+  const activitiesRef = useRef(null); 
+  const contractsRef = useRef(null); 
+  const interestsRef = useRef(null); // Create a ref for the Interests section
 
-  // Function to handle scrolling to a specific section
   const scrollToSection = (ref) => {
     if (ref.current) {
       ref.current.scrollIntoView({ behavior: 'smooth' });
@@ -50,8 +51,9 @@ const App = () => {
             researchRef,
             educationRef,
             referenceRef,
-            activitiesRef, // Include the Activities ref
-            contractsRef, // Include the new Contracts ref
+            activitiesRef, 
+            contractsRef,
+            interestsRef, // Add the new ref for Interests
           }}
         />
         <div ref={heroRef}><Hero /></div>
@@ -61,8 +63,8 @@ const App = () => {
         <div ref={publicationRef}><Publication /></div>
         <div ref={researchRef}><Research /></div>
         <div ref={educationRef}><Education /></div>
-        
         <div ref={activitiesRef}><Activities /></div> 
+        <div ref={interestsRef}><Interests /></div> 
         <div ref={referenceRef}><Reference /></div>
         <div ref={contractsRef}><Contract /></div>
       </div>

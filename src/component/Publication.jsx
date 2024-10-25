@@ -22,8 +22,7 @@ const Publication = () => {
       <div className='flex flex-col items-center'>
         {PUBLICATION.map((pub, index) => {
           const ref = useRef(null); // Create a ref for each publication item
-          const isInView = useInView(ref, { triggerOnce: true, threshold: 0.2 }); // Detect if this publication is in view
-
+          const isInView = useInView(ref, { triggerOnce: true, threshold: 0.2 }); 
           return (
             <motion.div
               ref={ref} // Attach ref for in-view detection

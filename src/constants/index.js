@@ -140,3 +140,30 @@ export const ACTIVITIES = [
   
   
 ];
+
+
+
+// constants.js
+export const INTEREST = [
+  {
+    title: "Computer Vision Research",
+    description: "Exploring algorithms for image recognition and object detection using deep learning techniques.",
+    technologies: ["Python", "OpenCV", "TensorFlow", "Keras"],
+  },
+  {
+    title: "Natural Language Processing (NLP) Project",
+    description: "Developed a chatbot using NLP to improve customer service experience with sentiment analysis.",
+    technologies: ["Python", "NLTK", "spaCy", "Transformers"],
+  },
+  {
+    title: "Image Processing Techniques",
+    description: "Implemented various image filtering and enhancement techniques for better visual quality.",
+    technologies: ["Python", "OpenCV", "Matplotlib"],
+  },
+  {
+    title: "Text Summarization",
+    description: "Worked on a project that generates concise summaries from large text documents using machine learning models.",
+    technologies: ["Python", "NLTK", "Hugging Face Transformers"],
+  },
+  // Add more activities as needed
+];
