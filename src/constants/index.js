@@ -95,18 +95,27 @@ export const EDUCATION = [
   {
     degree: "Bachelor of Science in Computer Science",
     institution: "Green University Of Bangladesh",
+    institutionLink: "https://www.green.edu.bd/",
     year: "2020 - 2024",
-    description: "Description : Focused on software development, data structures and Machine Learning.",
+    Result:"3.20",
+    description: "Focused on software development, data structures and Machine Learning.",
+    
   },
   {
     degree: "Higher Secondary Certificate",
     institution: "Government Science College",
+    institutionLink: "https://www.gsctd.edu.bd/",
     year: "2017 - 2019",
+    Result:"4.50",
+    description:"Science",
   },
   {
     degree: " Secondary School Certificate",
     institution: "Liaquat Ali Smriti School and College",
+    institutionLink: "",
     year: "2012 - 2017",
+    Result:"5.00",
+    description:"Science",
   },
   
 ];
@@ -115,6 +124,13 @@ export const EDUCATION = [
 
 // Education Reference data array
 export const EDUCATION_REFERENCES = [
+  {
+    name: "Mr x",
+    position: "Professor of Computer Science",
+    institution: "University of Technology",
+    contact: "jane.smith@unitech.edu",
+    relationship: "Academic Advisor",
+  },
   {
     name: "Mr x",
     position: "Professor of Computer Science",
@@ -131,15 +147,48 @@ export const EDUCATION_REFERENCES = [
 // src/constants/certificates.js
 
 // constants.js
+// constants.js
+// constants.js
 export const ACTIVITIES = [
   {
-    title: "Community Service Project",
-    description: "Organized a local community clean-up day, engaging residents in improving their neighborhood.",
-    technologies: ["Community Engagement", "Event Planning", "Team Coordination"],
+    title: "3rd Baliakandi Upzila Scout Samabesh",
+    description: "Participated in the 3rd Baliakandi Upzila Scout Samabesh-2015, fostering leadership and teamwork skills.",
+    technologies: ["Leadership", "Teamwork", "Community Engagement"],
+    certificate: "/src/assets/3rdB.pdf", // Absolute path from the public folder
   },
-  
-  
+  {
+    title: "3rd Zila Scout Samabesh",
+    description: "Engaged in the 3rd Zila Scout Samabesh-2016, promoting scouting values and community service.",
+    technologies: ["Community Service", "Event Participation", "Scouting Skills"],
+    certificate: "/src/assets/zila.pdf", // Absolute path
+  },
+  {
+    title: "4th National Power & Energy Camp",
+    description: "Attended the 4th National Power & Energy Camp 2015, focusing on renewable energy and sustainability.",
+    technologies: ["Renewable Energy", "Sustainability Education", "Team Collaboration"],
+    certificate: "/src/assets/Power.pdf", // Absolute path
+  },
+  {
+    title: "DUSS Science Festival",
+    description: "Participated in the DUSS Science Festival 2017, demonstrating scientific projects and experiments.",
+    technologies: ["Science Communication", "Project Presentation", "Teamwork"],
+    certificate: "/src/assets/zila.pdf", // Absolute path
+  },
+  {
+    title: "1st GSCPC National Photography Festival",
+    description: "Competed in the 1st GSCPC National Photography Festival-2018, highlighting photography skills.",
+    technologies: ["Photography", "Artistic Expression", "Visual Storytelling"],
+    certificate: "/src/assets/GSCPC.pdf", // Absolute path
+  },
+  {
+    title: "Graphic Design Course",
+    description: "Received a certificate of achievement for the successful completion of a 3-month Graphic Design Course at Good Approach.",
+    technologies: ["Graphic Design", "Digital Art", "Creativity"],
+    certificate: "/src/assets/creative .pdf", // Absolute path
+  },
 ];
+
+
 
 
 
@@ -165,5 +214,5 @@ export const INTEREST = [
     description: "Worked on a project that generates concise summaries from large text documents using machine learning models.",
     technologies: ["Python", "NLTK", "Hugging Face Transformers"],
   },
-  // Add more activities as needed
+
 ];

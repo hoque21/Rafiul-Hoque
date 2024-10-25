@@ -11,8 +11,7 @@ import Reference from './component/Reference';
 import Activities from './component/Activities'; 
 import Contract from './component/Contract';
 import Interests from './component/Interest';
-
-
+import Award from './component/Award'; // Import the new Award component
 
 const App = () => {
   // Create refs for each section
@@ -27,6 +26,7 @@ const App = () => {
   const activitiesRef = useRef(null); 
   const contractsRef = useRef(null); 
   const interestsRef = useRef(null); // Create a ref for the Interests section
+  const awardsRef = useRef(null); // Create a ref for the Awards section
 
   const scrollToSection = (ref) => {
     if (ref.current) {
@@ -54,6 +54,7 @@ const App = () => {
             activitiesRef, 
             contractsRef,
             interestsRef, // Add the new ref for Interests
+            awardsRef, // Add the new ref for Awards
           }}
         />
         <div ref={heroRef}><Hero /></div>
@@ -65,6 +66,7 @@ const App = () => {
         <div ref={educationRef}><Education /></div>
         <div ref={activitiesRef}><Activities /></div> 
         <div ref={interestsRef}><Interests /></div> 
+        <div ref={awardsRef}><Award /></div> 
         <div ref={referenceRef}><Reference /></div>
         <div ref={contractsRef}><Contract /></div>
       </div>

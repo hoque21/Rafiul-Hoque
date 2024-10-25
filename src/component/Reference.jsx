@@ -19,7 +19,7 @@ const EducationReferences = () => {
       </motion.h2>
 
       {/* References List */}
-      <div className='flex flex-col items-center'>
+      <div className='grid grid-cols-1 sm:grid-cols-2 gap-3 justify-items-center'> {/* Further reduced gap to 2 */}
         {EDUCATION_REFERENCES.map((ref, index) => {
           const refItem = useRef(null); // Create a ref for each reference item
           const isInView = useInView(refItem, { triggerOnce: true, threshold: 0.2 }); // Detect if this reference is in view
@@ -28,7 +28,7 @@ const EducationReferences = () => {
             <motion.div
               ref={refItem} // Attach ref for in-view detection
               key={index}
-              className="mb-6 p-6 border rounded-lg shadow-md w-full max-w-4xl" // Increased width for better presentation
+              className="p-4 border rounded-lg shadow-md w-full max-w-sm" // Further reduced padding to 2 for the item
               initial={{ opacity: 0, scale: 0.9, y: 30 }} // Start hidden and down
               animate={isInView ? { opacity: 1, scale: 1, y: 0 } : { opacity: 0, scale: 0.9, y: 30 }} // Animate based on scroll
               transition={{ duration: 0.5, delay: index * 0.2 }} // Staggered effect for each item
@@ -36,16 +36,16 @@ const EducationReferences = () => {
             >
               {/* Reference Name */}
               <h3 className="text-xl font-semibold">{ref.name}</h3>
-              <p className="mt-2">
+              <p className="mt-1"> {/* Reduced margin to 1 */}
                 <strong>Position:</strong> {ref.position} {/* Position of the reference */}
               </p>
-              <p className="mt-2">
+              <p className="mt-1"> {/* Reduced margin to 1 */}
                 <strong>Institution:</strong> {ref.institution} {/* Institution name */}
               </p>
-              <p className="mt-2">
+              <p className="mt-1"> {/* Reduced margin to 1 */}
                 <strong>Contact:</strong> {ref.contact} {/* Contact information */}
               </p>
-              <p className="mt-2">
+              <p className="mt-1"> {/* Reduced margin to 1 */}
                 <strong>Relationship:</strong> {ref.relationship} {/* Relationship to you */}
               </p>
             </motion.div>
