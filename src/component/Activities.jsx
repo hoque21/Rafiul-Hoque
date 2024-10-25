@@ -66,10 +66,10 @@ const Activities = () => {
                 <p className="mt-2">
                   <strong>Technologies Used:</strong> {activity.technologies.join(", ")}
                 </p>
-
                 <button 
                   onClick={() => handleDownload(activity)} 
                   className="ml-6 bg-[#00000080] rounded-full px-4 py-2 text-sm text-white border border-[#ffffff33] transition duration-300 ease-in-out hover:bg-[#00000099] hover:text-[#ffffff] hover:border-[#ffffff]"
+                  aria-label={`Download certificate for ${activity.title}`} // Added accessibility feature
                 >
                   Download Certificate
                 </button>
