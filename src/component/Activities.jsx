@@ -2,7 +2,7 @@
 import React, { useRef } from 'react';
 import { motion, useInView } from 'framer-motion';
 import Swal from 'sweetalert2';
-import { ACTIVITIES } from "../constants"; // Adjust this path if necessary
+import { ACTIVITIES } from "../constants"; 
 
 const Activities = () => {
   const sectionRef = useRef(null);
