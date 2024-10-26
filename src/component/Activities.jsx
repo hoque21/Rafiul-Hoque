@@ -1,4 +1,3 @@
-// Activities.js
 import React, { useRef } from 'react';
 import { motion, useInView } from 'framer-motion';
 import Swal from 'sweetalert2';
@@ -66,15 +65,13 @@ const Activities = () => {
                 <p className="mt-2">
                   <strong>Technologies Used:</strong> {activity.technologies.join(", ")}
                 </p>
-                <a 
-                  href={activity.certificate} 
-                  target="_blank" 
-                  rel="noopener noreferrer" 
+                <button 
+                  onClick={() => handleDownload(activity)} 
                   className="ml-6 bg-[#00000080] rounded-full px-4 py-2 text-sm text-white border border-[#ffffff33] transition duration-300 ease-in-out hover:bg-[#00000099] hover:text-[#ffffff] hover:border-[#ffffff]"
-                  aria-label={`Download or view certificate for ${activity.title}`}
+                  aria-label={`Download certificate for ${activity.title}`}
                 >
                   Download Certificate
-                </a>
+                </button>
               </div>
             </motion.div>
           );

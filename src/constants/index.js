@@ -184,7 +184,7 @@ export const ACTIVITIES = [
     title: "Graphic Design Course",
     description: "Received a certificate of achievement for the successful completion of a 3-month Graphic Design Course at Good Approach.",
     technologies: ["Graphic Design", "Digital Art", "Creativity"],
-    certificate: "/src/assets/creative .pdf", // Absolute path
+    certificate: "/src/assets/creative.pdf", // Absolute path
   },
 ];
 
