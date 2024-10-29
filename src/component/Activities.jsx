@@ -1,35 +1,49 @@
 import React, { useRef } from 'react';
 import { motion, useInView } from 'framer-motion';
 import Swal from 'sweetalert2';
-import { ACTIVITIES } from "../constants"; 
+
+const ACTIVITIES = [
+  {
+    title: "3rd Baliakandi Upzila Scout Samabesh",
+    description: "Participated in the 3rd Baliakandi Upzila Scout Samabesh-2015, fostering leadership and teamwork skills.",
+    technologies: ["Leadership", "Teamwork", "Community Engagement"],
+    certificate: "/src/assets/3rdB.pdf", // Ensure this path is correct
+  },
+  {
+    title: "3rd Zila Scout Samabesh",
+    description: "Engaged in the 3rd Zila Scout Samabesh-2016, promoting scouting values and community service.",
+    technologies: ["Community Service", "Event Participation", "Scouting Skills"],
+    certificate: "/src/assets/zila.pdf", // Ensure this path is correct
+  },
+  {
+    title: "4th National Power & Energy Camp",
+    description: "Attended the 4th National Power & Energy Camp 2015, focusing on renewable energy and sustainability.",
+    technologies: ["Renewable Energy", "Sustainability Education", "Team Collaboration"],
+    certificate: "/src/assets/Power.pdf", // Ensure this path is correct
+  },
+  {
+    title: "DUSS Science Festival",
+    description: "Participated in the DUSS Science Festival 2017, demonstrating scientific projects and experiments.",
+    technologies: ["Science Communication", "Project Presentation", "Teamwork"],
+    certificate: "/src/assets/duss.pdf", // Ensure this path is correct
+  },
+  {
+    title: "1st GSCPC National Photography Festival",
+    description: "Competed in the 1st GSCPC National Photography Festival-2018, highlighting photography skills.",
+    technologies: ["Photography", "Artistic Expression", "Visual Storytelling"],
+    certificate: "/src/assets/GSCPC.pdf", // Ensure this path is correct
+  },
+  {
+    title: "Graphic Design Course",
+    description: "Received a certificate of achievement for the successful completion of a 3-month Graphic Design Course at Good Approach.",
+    technologies: ["Graphic Design", "Digital Art", "Creativity"],
+    certificate: "/src/assets/creative.pdf", // Ensure this path is correct
+  },
+];
 
 const Activities = () => {
   const sectionRef = useRef(null);
   const isSectionInView = useInView(sectionRef, { triggerOnce: false, threshold: 0.2 });
-
-  const downloadCertificate = (url, title) => {
-    const link = document.createElement('a');
-    link.href = url;
-    link.download = `${title.replace(/\s+/g, '_')}_Certificate.pdf`;
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
-  };
-
-  const handleDownload = (activity) => {
-    Swal.fire({
-      title: 'Download Certificate',
-      text: `You are downloading the certificate for "${activity.title}".`,
-      icon: 'info',
-      showCancelButton: true,
-      confirmButtonText: 'Download',
-      cancelButtonText: 'Cancel',
-    }).then((result) => {
-      if (result.isConfirmed) {
-        downloadCertificate(activity.certificate, activity.title);
-      }
-    });
-  };
 
   return (
     <section ref={sectionRef} className="py-10">
@@ -65,13 +79,14 @@ const Activities = () => {
                 <p className="mt-2">
                   <strong>Technologies Used:</strong> {activity.technologies.join(", ")}
                 </p>
-                <button 
-                  onClick={() => handleDownload(activity)} 
+                <a
+                  href={activity.certificate}
+                  download
                   className="ml-6 bg-[#00000080] rounded-full px-4 py-2 text-sm text-white border border-[#ffffff33] transition duration-300 ease-in-out hover:bg-[#00000099] hover:text-[#ffffff] hover:border-[#ffffff]"
                   aria-label={`Download certificate for ${activity.title}`}
                 >
                   Download Certificate
-                </button>
+                </a>
               </div>
             </motion.div>
           );

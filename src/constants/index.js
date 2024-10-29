@@ -149,44 +149,6 @@ export const EDUCATION_REFERENCES = [
 // constants.js
 // constants.js
 // constants.js
-export const ACTIVITIES = [
-  {
-    title: "3rd Baliakandi Upzila Scout Samabesh",
-    description: "Participated in the 3rd Baliakandi Upzila Scout Samabesh-2015, fostering leadership and teamwork skills.",
-    technologies: ["Leadership", "Teamwork", "Community Engagement"],
-    certificate: "/src/assets/3rdB.pdf", // Absolute path from the public folder
-  },
-  {
-    title: "3rd Zila Scout Samabesh",
-    description: "Engaged in the 3rd Zila Scout Samabesh-2016, promoting scouting values and community service.",
-    technologies: ["Community Service", "Event Participation", "Scouting Skills"],
-    certificate: "/src/assets/zila.pdf", // Absolute path
-  },
-  {
-    title: "4th National Power & Energy Camp",
-    description: "Attended the 4th National Power & Energy Camp 2015, focusing on renewable energy and sustainability.",
-    technologies: ["Renewable Energy", "Sustainability Education", "Team Collaboration"],
-    certificate: "/src/assets/Power.pdf", // Absolute path
-  },
-  {
-    title: "DUSS Science Festival",
-    description: "Participated in the DUSS Science Festival 2017, demonstrating scientific projects and experiments.",
-    technologies: ["Science Communication", "Project Presentation", "Teamwork"],
-    certificate: "/src/assets/zila.pdf", // Absolute path
-  },
-  {
-    title: "1st GSCPC National Photography Festival",
-    description: "Competed in the 1st GSCPC National Photography Festival-2018, highlighting photography skills.",
-    technologies: ["Photography", "Artistic Expression", "Visual Storytelling"],
-    certificate: "/src/assets/GSCPC.pdf", // Absolute path
-  },
-  {
-    title: "Graphic Design Course",
-    description: "Received a certificate of achievement for the successful completion of a 3-month Graphic Design Course at Good Approach.",
-    technologies: ["Graphic Design", "Digital Art", "Creativity"],
-    certificate: "/src/assets/creative.pdf", // Absolute path
-  },
-];
 
 
 
