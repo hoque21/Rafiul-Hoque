@@ -14,6 +14,7 @@ export const EXPERIENCES = [
     company: "MMIT Soft LTD.",
     description: `Led a team in developing and maintaining web applications using JavaScript, React.js, and Node.js.`,
     technologies: ["Javascript", "React.js", "Node.js", "mySql","Tailwind"],
+    certificate: "/src/assets/zila.pdf",
   },
 ];
 
@@ -33,6 +34,14 @@ export const PROJECTS = [
       "An application for managing tasks and projects, with features such as task creation, assignment, and progress tracking.",
     technologies: ["HTML", "CSS", "Angular", "Firebase"],
     link: "https://example.com/task-management", // Add the actual link here
+  },
+  {
+    title: "Portfolio Website",
+    image: project3,
+    description:
+      "A personal portfolio website showcasing projects, skills, and contact information.",
+    technologies: ["HTML", "CSS", "React", "Tailwind"],
+    link: "https://rafiulhoque.netlify.app/", // Add the actual link here
   },
   {
     title: "Portfolio Website",
@@ -138,6 +147,7 @@ export const EDUCATION_REFERENCES = [
     contact: "jane.smith@unitech.edu",
     relationship: "Academic Advisor",
   },
+  
   
 ];
 

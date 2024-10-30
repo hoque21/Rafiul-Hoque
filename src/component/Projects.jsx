@@ -1,6 +1,6 @@
-import React, { useRef } from 'react';
+import React, { useRef, useState } from 'react';
 import { motion, useInView } from 'framer-motion';
-import { PROJECTS } from '../constants';
+import { PROJECTS } from '../constants'; // Ensure this imports correctly
 
 // Predefined color mapping for technologies
 const colorMapping = {
@@ -10,10 +10,20 @@ const colorMapping = {
   HTML: 'bg-orange-500 text-white',
   Nodejs: 'bg-green-500 text-white',
   MongoDB: 'bg-green-700 text-white',
+  Angular: 'bg-red-500 text-white',
+  Firebase: 'bg-orange-400 text-black',
+  Tailwind: 'bg-teal-400 text-white',
   // Add more technologies and colors here...
 };
 
 const Projects = () => {
+  const [visibleCount, setVisibleCount] = useState(3); // Initial visible projects count
+
+  const handleShowMore = () => {
+    // Show 3 more projects each time, ensuring we do not exceed PROJECTS length
+    setVisibleCount((prevCount) => Math.min(prevCount + 1, PROJECTS.length));
+  };
+
   return (
     <div className='pb-4'>
       {/* Animated Section Title */}
@@ -28,7 +38,7 @@ const Projects = () => {
 
       {/* Projects Container */}
       <div className='flex flex-col items-center'>
-        {PROJECTS.map((project, index) => {
+        {PROJECTS.slice(0, visibleCount).map((project, index) => {
           const ref = useRef(null);
           const isInView = useInView(ref, { triggerOnce: true, threshold: 0.2 });
 
@@ -100,14 +110,26 @@ const Projects = () => {
           );
         })}
 
-        <motion.p
-          className='text-4xl font-bold text-white'
-          initial={{ opacity: 0, y: -20 }} // Start hidden and slightly above
-          animate={{ opacity: 1, y: 0 }} // Animate to visible and original position
-          transition={{ duration: 0.8, ease: 'easeInOut' }} // Duration and easing
-        >
-          Coming Soon
-        </motion.p>
+        {/* Show More Button with Animation */}
+        {visibleCount < PROJECTS.length && (
+          <div className="flex justify-center mt-6">
+            <motion.button
+              onClick={handleShowMore}
+              className="bg-[#00000080] rounded-full px-4 py-2 text-sm text-white border border-[#ffffff33] transition duration-300 ease-in-out hover:bg-[#00000099] hover:text-[#ffffff] hover:border-[#ffffff]"
+              initial={{ x: 100, opacity: 0 }}  // Start from right, off-screen
+              animate={{ x: 0, opacity: 1, scale: [1, 1.1, 1] }}  // Slide in and pulse
+              transition={{
+                x: { type: "spring", stiffness: 150, damping: 8 }, // Faster slide with higher stiffness and lower damping
+                opacity: { duration: 0.4 },  // Slightly quicker fade-in
+                scale: { duration: 1.2, repeat: Infinity, ease: "easeInOut" }, // Faster pulse effect
+              }}
+              whileHover={{ scale: 1.1 }}  // Smooth scaling on hover
+              whileTap={{ scale: 0.95 }}   // Slight scale down on tap
+            >
+              Show More
+            </motion.button>
+          </div>
+        )}
       </div>
     </div>
   );

@@ -93,15 +93,23 @@ const Activities = () => {
 
       {visibleCount < ACTIVITIES.length && (
         <div className="flex justify-center mt-6">
-          <motion.button
-            onClick={handleShowMore}
-            className="bg-[#00000080] rounded-full px-4 py-2 text-sm text-white border border-[#ffffff33] transition duration-300 ease-in-out hover:bg-[#00000099] hover:text-[#ffffff] hover:border-[#ffffff]"
-            whileHover={{ scale: 1.1, transition: { duration: 0.3 } }} // Hover effect for pop-out
-            whileTap={{ scale: 0.95 }}  // Press effect for 3D press
-          >
-            Show More
-          </motion.button>
-        </div>
+        <motion.button
+          onClick={handleShowMore}
+          className="bg-[#00000080] rounded-full px-4 py-2 text-sm text-white border border-[#ffffff33] transition duration-300 ease-in-out hover:bg-[#00000099] hover:text-[#ffffff] hover:border-[#ffffff]"
+          initial={{ x: 100, opacity: 0 }}  // Start from right, off-screen
+          animate={{ x: 0, opacity: 1, scale: [1, 1.1, 1] }}  // Slide in and pulse
+          transition={{
+            x: { type: "spring", stiffness: 150, damping: 8 }, // Faster slide with higher stiffness and lower damping
+            opacity: { duration: 0.4 },  // Slightly quicker fade-in
+            scale: { duration: 1.2, repeat: Infinity, ease: "easeInOut" }, // Faster pulse effect
+          }}
+          whileHover={{ scale: 1.1 }}  // Smooth scaling on hover
+          whileTap={{ scale: 0.95 }}   // Slight scale down on tap
+        >
+          Show More
+        </motion.button>
+      </div>
+      
       )}
     </section>
   );
