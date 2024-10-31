@@ -93,13 +93,17 @@ const Hero = () => {
             {HERO_CONTENT}
           </motion.p>
 
-          <a 
+          {/* Animated Button */}
+          <motion.a 
             href={Resume} 
             onClick={handleDownload} // Trigger handleDownload on click
-            className="bg-white rounded-full px-6 py-3 text-sm text-stone-800 mb-10"
+            className="bg-white rounded-full px-6 py-3 text-sm text-stone-800 mb-10 cursor-pointer"
+            whileHover={{ scale: 1.05, boxShadow: '0px 4px 12px rgba(0,0,0,0.2)' }} // Hover effect
+            whileTap={{ scale: 0.95 }} // Tap effect
+            transition={{ type: 'spring', stiffness: 300 }} // Smooth transition
           >
             Download Resume
-          </a>
+          </motion.a>
         </motion.div>
 
         <motion.div 
