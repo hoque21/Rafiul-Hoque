@@ -36,7 +36,7 @@ const Navbar = ({ scrollToSection, refs }) => {
   };
 
   return (
-    <nav className="relative flex justify-between items-center py-6 px-4 bg-transparent">
+    <nav className="relative flex fixed justify-between items-center py-6 px-4 bg-transparent">
       {/* Scroll Progress Bar */}
       <div
         style={{ width: `${scrollProgress}%` }}

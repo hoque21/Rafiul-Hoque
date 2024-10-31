@@ -1,4 +1,4 @@
-import React, { useRef, useState } from 'react';
+import { useRef, useState } from 'react';
 import { motion, useInView } from 'framer-motion';
 
 const ACTIVITIES = [
@@ -42,12 +42,26 @@ const ACTIVITIES = [
 
 const Activities = () => {
   const [visibleCount, setVisibleCount] = useState(3); // Number of activities to show initially
+  const [loading, setLoading] = useState(false); // Loading state
+  const [showAll, setShowAll] = useState(false); // State to track if all activities should be shown
   const sectionRef = useRef(null);
   const isSectionInView = useInView(sectionRef, { triggerOnce: false, threshold: 0.2 });
 
   const handleShowMore = () => {
-    setVisibleCount((prevCount) => Math.min(prevCount + 3, ACTIVITIES.length));
+    setLoading(true); // Set loading state to true
+    setTimeout(() => {
+      setVisibleCount((prevCount) => Math.min(prevCount + 3, ACTIVITIES.length));
+      setLoading(false); // Reset loading state after delay
+    }, 800); // Simulate a loading delay (adjust time as needed)
   };
+
+  const handleHideActivities = () => {
+    setVisibleCount(3); // Reset to show only the initial activities
+    setShowAll(false); // Set showAll to false
+  };
+
+  // Check if all activities are currently visible
+  const allActivitiesVisible = visibleCount >= ACTIVITIES.length;
 
   return (
     <section ref={sectionRef} className="py-10">
@@ -89,27 +103,59 @@ const Activities = () => {
             </div>
           </motion.div>
         ))}
+
+        {loading && (
+          <motion.div
+            className="mt-4 text-center"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.4 }}
+          >
+            <span className="text-lg">Loading...</span>
+          </motion.div>
+        )}
       </div>
 
-      {visibleCount < ACTIVITIES.length && (
+      {/* Conditionally render the button based on loading state and showAll state */}
+      {!loading && !showAll && visibleCount < ACTIVITIES.length && (
         <div className="flex justify-center mt-6">
-        <motion.button
-          onClick={handleShowMore}
-          className="bg-[#00000080] rounded-full px-4 py-2 text-sm text-white border border-[#ffffff33] transition duration-300 ease-in-out hover:bg-[#00000099] hover:text-[#ffffff] hover:border-[#ffffff]"
-          initial={{ x: 100, opacity: 0 }}  // Start from right, off-screen
-          animate={{ x: 0, opacity: 1, scale: [1, 1.1, 1] }}  // Slide in and pulse
-          transition={{
-            x: { type: "spring", stiffness: 150, damping: 8 }, // Faster slide with higher stiffness and lower damping
-            opacity: { duration: 0.4 },  // Slightly quicker fade-in
-            scale: { duration: 1.2, repeat: Infinity, ease: "easeInOut" }, // Faster pulse effect
-          }}
-          whileHover={{ scale: 1.1 }}  // Smooth scaling on hover
-          whileTap={{ scale: 0.95 }}   // Slight scale down on tap
-        >
-          Show More
-        </motion.button>
-      </div>
-      
+          <motion.button
+            onClick={handleShowMore}
+            className="bg-[#00000080] rounded-full px-4 py-2 text-sm text-white border border-[#ffffff33] transition duration-300 ease-in-out hover:bg-[#00000099] hover:text-[#ffffff] hover:border-[#ffffff]"
+            initial={{ x: 100, opacity: 0 }}  // Start from right, off-screen
+            animate={{ x: 0, opacity: 1, scale: [1, 1.1, 1] }}  // Slide in and pulse
+            transition={{
+              x: { type: "spring", stiffness: 150, damping: 8 }, // Faster slide with higher stiffness and lower damping
+              opacity: { duration: 0.4 },  // Slightly quicker fade-in
+              scale: { duration: 1.2, repeat: Infinity, ease: "easeInOut" }, // Faster pulse effect
+            }}
+            whileHover={{ scale: 1.1 }}  // Smooth scaling on hover
+            whileTap={{ scale: 0.95 }}   // Slight scale down on tap
+          >
+            Show More
+          </motion.button>
+        </div>
+      )}
+
+      {/* Show 'Hide' button if all activities are visible */}
+      {!loading && allActivitiesVisible && (
+        <div className="flex justify-center mt-6">
+          <motion.button
+            onClick={handleHideActivities}
+            className="bg-[#00000080] rounded-full px-4 py-2 text-sm text-white border border-[#ffffff33] transition duration-300 ease-in-out hover:bg-[#00000099] hover:text-[#ffffff] hover:border-[#ffffff]"
+            initial={{ x: 100, opacity: 0 }}  // Start from right, off-screen
+            animate={{ x: 0, opacity: 1, scale: [1, 1.1, 1] }}  // Slide in and pulse
+            transition={{
+              x: { type: "spring", stiffness: 150, damping: 8 }, // Faster slide with higher stiffness and lower damping
+              opacity: { duration: 0.4 },  // Slightly quicker fade-in
+              scale: { duration: 1.2, repeat: Infinity, ease: "easeInOut" }, // Faster pulse effect
+            }}
+            whileHover={{ scale: 1.1 }}  // Smooth scaling on hover
+            whileTap={{ scale: 0.95 }}   // Slight scale down on tap
+          >
+            Hide Activities
+          </motion.button>
+        </div>
       )}
     </section>
   );

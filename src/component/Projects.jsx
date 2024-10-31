@@ -1,137 +1,184 @@
 import React, { useRef, useState } from 'react';
 import { motion, useInView } from 'framer-motion';
-import { PROJECTS } from '../constants'; // Ensure this imports correctly
+import project1 from "../assets/projects/project-1.webp";
+import project2 from "../assets/projects/project-2.webp";
+import project3 from "../assets/projects/project-3.webp";
+import project4 from "../assets/projects/project-4.webp";
 
-// Predefined color mapping for technologies
-const colorMapping = {
-  React: 'bg-blue-500 text-white',
-  CSS: 'bg-blue-300 text-black',
-  JavaScript: 'bg-yellow-500 text-black',
-  HTML: 'bg-orange-500 text-white',
-  Nodejs: 'bg-green-500 text-white',
-  MongoDB: 'bg-green-700 text-white',
-  Angular: 'bg-red-500 text-white',
-  Firebase: 'bg-orange-400 text-black',
-  Tailwind: 'bg-teal-400 text-white',
-  // Add more technologies and colors here...
-};
+const PROJECTS = [
+  {
+    title: "E-Commerce Website",
+    description:
+      "A fully functional e-commerce website with features like product listing, shopping cart, and user authentication.",
+    technologies: ["HTML", "CSS", "React", "Nodejs", "MongoDB"],
+    link: "https://example.com/e-commerce",
+    image: project1,
+  },
+  {
+    title: "Task Management App",
+    description:
+      "An application for managing tasks and projects, with features such as task creation, assignment, and progress tracking.",
+    technologies: ["HTML", "CSS", "Angular", "Firebase"],
+    link: "https://example.com/task-management",
+    image: project2,
+  },
+  {
+    title: "Portfolio Website",
+    description:
+      "A personal portfolio website showcasing projects, skills, and contact information.",
+    technologies: ["HTML", "CSS", "React", "Tailwind"],
+    link: "https://rafiulhoque.netlify.app/",
+    image: project3,
+  },
+  
+  {
+    title: "Doctor Appointment System",
+    description:
+      "A web application for scheduling doctor appointments, with user authentication and real-time notifications.",
+    technologies: ["HTML", "CSS", "Tailwind", "JavaScript", "React", "Firebase"],
+    link: "https://example.com/doctor-appointment",
+    image: project4,
+  },
+  {
+    title: "School Management System",
+    description:
+      "A comprehensive web application for managing student records, classes, and attendance.",
+    technologies: ["HTML", "CSS", "Tailwind"],
+    link: "https://cantschoolmanagement.netlify.app/",
+    image: project4,
+  },
+  {
+    title: "QR Code Generator",
+    description:
+      "A simple web application that generates QR codes for URLs or text inputs using JavaScript and HTML.",
+    technologies: ["HTML", "CSS", "JavaScript", "Tailwind"],
+    link: "https://codegenerator001.netlify.app",
+    image: project1,
+  },
+  {
+    title: "Expense Tracker",
+    description:
+      "An application that helps users track their expenses, manage budgets, and analyze spending patterns.",
+    technologies: ["HTML", "CSS", "JavaScript", "React", "Node.js"],
+    link: "https://example.com/expense-tracker",
+    image: project1,
+  },
+  {
+    title: "Fake News Detection",
+    description:
+      "A machine learning application that detects fake news articles by analyzing their content and sources.",
+    technologies: ["Python", "Flask", "Machine Learning", "Natural Language Processing"],
+    link: "https://example.com/fake-news-detection",
+    image: project1,
+  },
+  {
+    title: "Heart Disease Prediction",
+    description:
+      "An AI-based application that predicts the likelihood of heart disease in patients based on medical data.",
+    technologies: ["Python", "TensorFlow", "Machine Learning"],
+    link: "https://example.com/heart-disease-prediction",
+    image: project1,
+  },
+  {
+    title: "Diabetes Prediction",
+    description:
+      "An application that uses artificial intelligence to predict the risk of diabetes in individuals based on health metrics.",
+    technologies: ["Python", "Scikit-Learn", "Machine Learning"],
+    link: "https://example.com/diabetes-prediction",
+    image: project1,
+  },
+];
 
 const Projects = () => {
-  const [visibleCount, setVisibleCount] = useState(3); // Initial visible projects count
+  const [visibleCount, setVisibleCount] = useState(3);
+  const [loading, setLoading] = useState(false); // State to manage loading
+  const sectionRef = useRef(null);
+  const isSectionInView = useInView(sectionRef, { triggerOnce: false, threshold: 0.2 });
 
   const handleShowMore = () => {
-    // Show 3 more projects each time, ensuring we do not exceed PROJECTS length
-    setVisibleCount((prevCount) => Math.min(prevCount + 1, PROJECTS.length));
+    setLoading(true); // Set loading to true
+    setTimeout(() => {
+      setVisibleCount((prevCount) => Math.min(prevCount + 3, PROJECTS.length));
+      setLoading(false); // Set loading to false after the timeout
+    }, 1000); // Simulate loading time
   };
 
   return (
-    <div className='pb-4'>
-      {/* Animated Section Title */}
+    <section ref={sectionRef} className="py-10">
       <motion.h2
-        className='my-20 text-center text-4xl'
+        className="my-20 text-center text-4xl font-bold"
         initial={{ opacity: 0, y: -50 }}
-        animate={{ opacity: 1, y: 0 }}
+        animate={isSectionInView ? { opacity: 1, y: 0 } : { opacity: 0, y: -50 }}
         transition={{ duration: 0.6 }}
       >
         Projects
       </motion.h2>
 
-      {/* Projects Container */}
-      <div className='flex flex-col items-center'>
-        {PROJECTS.slice(0, visibleCount).map((project, index) => {
-          const ref = useRef(null);
-          const isInView = useInView(ref, { triggerOnce: true, threshold: 0.2 });
-
-          return (
-            <motion.div
-              ref={ref} // Attach ref for in-view detection
-              key={index}
-              className='mb-8 flex flex-col lg:flex-row items-center justify-center text-center lg:text-left lg:justify-start w-full max-w-5xl p-6 border border-gray-200 shadow-lg rounded-lg'
-              initial={{ opacity: 0, scale: 0.9, y: 50 }} // Start hidden and down
-              animate={isInView ? { opacity: 1, scale: 1, y: 0 } : { opacity: 0, scale: 0.9, y: 50 }} // Animate based on scroll
-              transition={{ duration: 0.5, delay: index * 0.2 }} // Staggered effect for each item
-              whileHover={{ scale: 1.05, transition: { duration: 0.3 } }} // Scale up slightly when hovered
-            >
-              {/* Project Image */}
-              <div className='w-full lg:w-1/4 mb-4 lg:mb-0'>
-                <motion.img
-                  src={project.image}
-                  alt={project.title}
-                  className='w-64 h-64 object-cover rounded'
-                  initial={{ opacity: 0 }}
-                  animate={{ opacity: 1 }}
-                  transition={{ duration: 0.5, delay: index * 0.3 }}
-                />
+      <div className="flex flex-col items-center">
+        {PROJECTS.slice(0, visibleCount).map((project, index) => (
+          <motion.div
+            key={index}
+            className="mb-6 p-6 border rounded-lg shadow-md w-full max-w-4xl"
+            initial={{ opacity: 0, scale: 0.9, y: 30 }}
+            animate={{ opacity: 1, scale: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: index * 0.2 }}
+            whileHover={{ scale: 1.05, transition: { duration: 0.3 } }}
+          >
+            <div className="flex items-center">
+              <img src={project.image} alt={project.title} className="w-32 h-32 mr-4 rounded" />
+              <div>
+                <h3 className="text-xl font-semibold">{project.title}</h3>
+                <p className="mt-2">{project.description}</p>
+                <div className="mt-2">
+                  <strong>Technologies:</strong> {project.technologies.join(", ")}
+                </div>
+                <a
+                  href={project.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-blue-500 mt-2 inline-block"
+                >
+                  View Project
+                </a>
               </div>
+            </div>
+          </motion.div>
+        ))}
+      </div>
 
-              {/* Project Info */}
-              <div className='w-full lg:w-3/4 lg:pl-6'>
-                {/* Project Title */}
-                <motion.h3
-                  className='text-2xl font-bold mb-2'
-                  initial={{ opacity: 0 }}
-                  animate={{ opacity: 1 }}
-                  transition={{ duration: 0.5, delay: index * 0.4 }}
-                >
-                  <a href={project.link} target="_blank" rel="noopener noreferrer">
-                    {project.title}
-                  </a>
-                </motion.h3>
-
-                {/* Project Description */}
-                <motion.p
-                  className='mb-4 text-lg'
-                  initial={{ opacity: 0 }}
-                  animate={{ opacity: 1 }}
-                  transition={{ duration: 0.5, delay: index * 0.5 }}
-                >
-                  {project.description}
-                </motion.p>
-
-                {/* Project Technologies */}
-                <motion.div
-                  className='flex flex-wrap justify-center lg:justify-start'
-                  initial={{ opacity: 0 }}
-                  animate={{ opacity: 1 }}
-                  transition={{ duration: 0.5, delay: index * 0.6 }}
-                >
-                  {project.technologies.map((tech, techIndex) => (
-                    <motion.span
-                      key={techIndex}
-                      className={`mr-2 mb-2 px-2 py-1 rounded ${colorMapping[tech] || 'bg-gray-200 text-black'}`}
-                      whileHover={{ scale: 1.1, rotate: 5 }} // Slight scaling and rotation on hover
-                    >
-                      {tech}
-                    </motion.span>
-                  ))}
-                </motion.div>
-              </div>
-            </motion.div>
-          );
-        })}
-
-        {/* Show More Button with Animation */}
-        {visibleCount < PROJECTS.length && (
+      {loading ? ( // Conditional rendering for loading state
+        <div className="flex justify-center mt-6">
+          <motion.div
+            initial={{ opacity: 0, scale: 0.9 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.4 }}
+            className="text-lg text-gray-700"
+          >
+            Loading...
+          </motion.div>
+        </div>
+      ) : (
+        visibleCount < PROJECTS.length && (
           <div className="flex justify-center mt-6">
             <motion.button
               onClick={handleShowMore}
               className="bg-[#00000080] rounded-full px-4 py-2 text-sm text-white border border-[#ffffff33] transition duration-300 ease-in-out hover:bg-[#00000099] hover:text-[#ffffff] hover:border-[#ffffff]"
-              initial={{ x: 100, opacity: 0 }}  // Start from right, off-screen
-              animate={{ x: 0, opacity: 1, scale: [1, 1.1, 1] }}  // Slide in and pulse
+              initial={{ x: 100, opacity: 0 }}
+              animate={{ x: 0, opacity: 1, scale: [1, 1.1, 1] }}
               transition={{
-                x: { type: "spring", stiffness: 150, damping: 8 }, // Faster slide with higher stiffness and lower damping
-                opacity: { duration: 0.4 },  // Slightly quicker fade-in
-                scale: { duration: 1.2, repeat: Infinity, ease: "easeInOut" }, // Faster pulse effect
+                x: { type: "spring", stiffness: 150, damping: 8 },
+                opacity: { duration: 0.4 },
+                scale: { duration: 1.2, repeat: Infinity, ease: "easeInOut" },
               }}
-              whileHover={{ scale: 1.1 }}  // Smooth scaling on hover
-              whileTap={{ scale: 0.95 }}   // Slight scale down on tap
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.95 }}
             >
               Show More
             </motion.button>
           </div>
-        )}
-      </div>
-    </div>
+        )
+      )}
+    </section>
   );
 };
 

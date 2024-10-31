@@ -30,10 +30,10 @@ const Education = () => {
           // Handle button click
           const handleClick = () => {
             setShowResult(true); // Show result
-            // Set a timeout to hide the result after 1 second
+            // Set a timeout to hide the result after 10 seconds
             const timer = setTimeout(() => {
-              setShowResult(false); // Hide result after 1 second
-            }, 1000);
+              setShowResult(false); // Hide result after 10 seconds
+            }, 10000); // Change to 10000 milliseconds (10 seconds)
 
             // Clear timeout if the component unmounts
             return () => clearTimeout(timer);

@@ -2,7 +2,7 @@ import React, { useRef } from 'react';
 import { motion, useInView } from 'framer-motion';
 import Swal from 'sweetalert2';
 import Resume from '../assets/Rafiul Hoque.pdf'; // Path to the certificate
-import GUB from '../assets/GUB.jpg'; // Image for SweetAlert, adjust the path accordingly
+import GUB from '../assets/GUB.jpg'; // Image for SweetAlert
 
 const Award = () => {
   const sectionRef = useRef(null); // Reference to the Awards section
@@ -14,7 +14,7 @@ const Award = () => {
       title: "Creative Talent Search Competition",
       description: "Awarded 'Best Talent of the Year' in 2014 for outstanding performance in Mathematics and Computer at the Upazila-level Creative Talent Search Competition. Recognized for excellence among school-level students.",
       topic: ["Mathematics & Computer"],
-      certificate: "/src/assets/3rdB.pdf" // Update to use the same certificate path
+      certificate: Resume // Using the correct path for the certificate
     },
     // Add more awards as needed
   ];
@@ -81,6 +81,10 @@ const Award = () => {
         {awardsData.map((award, index) => {
           const ref = useRef(null); // Create a ref for each award item
           const isInView = useInView(ref, { triggerOnce: true, threshold: 0.2 }); // Detect if this award item is in view
+          
+          // Ref for the topics section
+          const topicsRef = useRef(null);
+          const isTopicsInView = useInView(topicsRef, { triggerOnce: true, threshold: 0.2 }); // Detect if topics are in view
 
           return (
             <motion.div
@@ -101,20 +105,34 @@ const Award = () => {
               {/* Topics and Button Section */}
               <div className="flex justify-between items-center mt-4">
                 {/* Award Topics */}
-                <ul className="flex space-x-4 mt-1">
+                <motion.ul
+                  ref={topicsRef} // Attach ref for topics in-view detection
+                  className="flex space-x-4 mt-1"
+                  initial={{ opacity: 0, y: 20 }} // Start hidden and slightly below
+                  animate={isTopicsInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }} // Animate based on scroll
+                  transition={{ duration: 0.5, delay: 0.1 }} // Smooth animation
+                >
                   <strong>Topics:</strong>
                   {award.topic && award.topic.map((tech, idx) => (
-                    <li key={idx} className="ml-2 list-disc">{tech}</li>
+                    <motion.li
+                      key={idx}
+                      className="ml-2 list-disc"
+                      initial={{ opacity: 0, scale: 0.9 }} // Start hidden and scaled down
+                      animate={isTopicsInView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.9 }} // Animate based on scroll
+                      transition={{ duration: 0.5, delay: idx * 0.1 }} // Staggered effect for each topic
+                    >
+                      {tech}
+                    </motion.li>
                   ))}
-                </ul>
+                </motion.ul>
                 {/* Download Certificate Button */}
-                <a 
-                  href={award.certificate} 
-                  onClick={(e) => handleDownload(e, award.certificate)} // Pass the certificate to handleDownload
-                  className="bg-white rounded-full px-4 py-2 text-sm text-stone-800 border border-gray-300 hover:bg-gray-200 transition duration-300" // Style for the button
+                <button
+                  onClick={(e) => handleDownload(e, award.certificate)}
+                  className="ml-6 bg-[#00000080] rounded-full px-4 py-2 text-sm text-white border border-[#ffffff33] transition duration-300 ease-in-out hover:bg-[#00000099] hover:text-[#ffffff] hover:border-[#ffffff]"
+                  aria-label={`Download certificate for ${award.title}`}
                 >
                   Download Certificate
-                </a>
+                </button>
               </div>
             </motion.div>
           );
