@@ -100,7 +100,7 @@ const Navbar = ({ scrollToSection, refs }) => {
         <a onClick={() => scrollToSection(refs.researchRef)} className="cursor-pointer hover:text-blue-500">Research Work</a>
         <a onClick={() => scrollToSection(refs.educationRef)} className="cursor-pointer hover:text-blue-500">Education</a>
         <a onClick={() => scrollToSection(refs.activitiesRef)} className="cursor-pointer hover:text-blue-500">Activities</a>
-        <a onClick={() => scrollToSection(refs.awardsRef)} className="cursor-pointer hover:text-blue-500">Awards</a> {/* Add the Awards link */}
+        <a onClick={() => scrollToSection(refs.awardsRef)} className="cursor-pointer hover:text-blue-500">Awards</a>
       </div>
 
       {/* Mobile Menu with Animation */}
@@ -133,8 +133,7 @@ const Navbar = ({ scrollToSection, refs }) => {
               <a onClick={() => { scrollToSection(refs.researchRef); setIsOpen(false); }} className="cursor-pointer hover:text-blue-400">Research Work</a>
               <a onClick={() => { scrollToSection(refs.educationRef); setIsOpen(false); }} className="cursor-pointer hover:text-blue-400">Education</a>
               <a onClick={() => { scrollToSection(refs.activitiesRef); setIsOpen(false); }} className="cursor-pointer hover:text-blue-400">Activities</a>
-              <a onClick={() => { scrollToSection(refs.awardsRef); setIsOpen(false); }} className="cursor-pointer hover:text-blue-400">Awards</a> {/* Add Awards link in mobile menu */}
-              
+              <a onClick={() => { scrollToSection(refs.awardsRef); setIsOpen(false); }} className="cursor-pointer hover:text-blue-400">Awards</a>
             </motion.div>
           </>
         )}

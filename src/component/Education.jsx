@@ -72,7 +72,7 @@ const Education = () => {
                   onClick={handleClick} 
                   className="px-4 py-2 bg-[#00091d] text-white rounded hover:bg-[#1a1a2e] transition duration-200 ml-4" // Updated colors
                 >
-                  {showResult ? "Hide Result" : "Show Result"}
+                  {showResult ? "Result" : "Show Result"}
                 </button>
               </div>
               {/* Result Display with Animation */}
@@ -85,7 +85,7 @@ const Education = () => {
                     transition={{ duration: 1.00 }} // Duration of the animation
                     className="text-xl mt-2 absolute right-0" // Match the title's font size and weight
                   >
-                    <strong>Result:</strong> {edu.Result} {/* Result for each education item */}
+                    <strong></strong> {edu.Result} {/* Result for each education item */}
                   </motion.div>
                 )}
               </div>
