@@ -17,12 +17,12 @@ const Interests = () => {
     <div ref={sectionRef} className='pb-4'> {/* Add padding for spacing */}
       {/* Animated Section Title */}
       <motion.h2
-        className='my-20 text-center text-4xl'
+        className='my-20 text-center font-semibold text-4xl'
         initial={{ opacity: 0, y: -50 }}
         animate={isSectionInView ? { opacity: 1, y: 0 } : { opacity: 0, y: -50 }} // Animate based on scroll
         transition={{ duration: 0.6 }}
       >
-        Interests
+        Interest
       </motion.h2>
 
       {/* Centered Container for Interests List */}
