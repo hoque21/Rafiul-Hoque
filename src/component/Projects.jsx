@@ -108,7 +108,7 @@ const Projects = () => {
         {PROJECTS.slice(0, visibleCount).map((project, index) => (
           <motion.div
             key={index}
-            className="mb-6 p-6 border border-gray-600 rounded-lg shadow-md w-full max-w-4xl "
+            className="mb-6 p-6 border border-gray-600 rounded-lg shadow-md w-full max-w-4xl"
             initial={{ opacity: 0, scale: 0.9, y: 30 }}
             animate={{ opacity: 1, scale: 1, y: 0 }}
             transition={{ duration: 0.5, delay: index * 0.2 }}
@@ -122,14 +122,16 @@ const Projects = () => {
                 <div className="mt-2 text-gray-400">
                   <strong>Technologies:</strong> {project.technologies.join(", ")}
                 </div>
-                <a
-                  href={project.link}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="mt-4 inline-block px-4 py-2 text-sm font-semibold text-white bg-[#00091d] rounded-full shadow-lg transition duration-300 ease-in-out hover:bg-[#1a2a40] hover:shadow-xl focus:ring-4 focus:ring-blue-300"
-                >
-                  View Project
-                </a>
+                <div className="mt-4 flex justify-center"> {/* Centered Button Wrapper */}
+                  <a
+                    href={project.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="px-4 py-2 text-sm font-semibold text-white bg-[#00091d] rounded-full shadow-lg transition duration-300 ease-in-out hover:bg-[#1a2a40] hover:shadow-xl focus:ring-4 focus:ring-blue-300"
+                  >
+                    View Project
+                  </a>
+                </div>
               </div>
             </div>
           </motion.div>
