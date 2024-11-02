@@ -26,7 +26,7 @@ const PROJECTS = [
     description:
       "A machine learning application that detects fake news articles by analyzing their content and sources.",
     technologies: ["Python", "Flask", "Machine Learning", "Natural Language Processing"],
-    link: "https://example.com/fake-news-detection",
+    link: "https://github.com/hoque21/Fake-news-Detection",
     image: project1,
   },
   {
@@ -74,7 +74,7 @@ const PROJECTS = [
     description:
       "An application that helps users track their expenses, manage budgets, and analyze spending patterns.",
     technologies: ["HTML", "CSS", "JavaScript", "React", "Node.js"],
-    link: "https://example.com/expense-tracker",
+    link: "https://github.com/hoque21/Expense-Tracker",
     image: project1,
   },
 ];
