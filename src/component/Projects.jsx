@@ -122,7 +122,7 @@ const Projects = () => {
                 <div className="mt-2 text-gray-400">
                   <strong>Technologies:</strong> {project.technologies.join(", ")}
                 </div>
-                <div className="mt-4 flex justify-center"> {/* Centered Button Wrapper */}
+                <div className="mt-4 flex"> {/* Centered Button Wrapper */}
                   <a
                     href={project.link}
                     target="_blank"
