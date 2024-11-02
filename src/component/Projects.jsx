@@ -1,27 +1,10 @@
 import React, { useRef, useState } from 'react';
 import { motion, useInView } from 'framer-motion';
 import project1 from "../assets/projects/project-1.webp";
-import project2 from "../assets/projects/project-2.webp";
 import project3 from "../assets/projects/project-3.webp";
 import project4 from "../assets/projects/project-4.webp";
 
 const PROJECTS = [
-  {
-    title: "E-Commerce Website",
-    description:
-      "A fully functional e-commerce website with features like product listing, shopping cart, and user authentication.",
-    technologies: ["HTML", "CSS", "React", "Nodejs", "MongoDB"],
-    link: "https://example.com/e-commerce",
-    image: project1,
-  },
-  {
-    title: "Task Management App",
-    description:
-      "An application for managing tasks and projects, with features such as task creation, assignment, and progress tracking.",
-    technologies: ["HTML", "CSS", "Angular", "Firebase"],
-    link: "https://example.com/task-management",
-    image: project2,
-  },
   {
     title: "Portfolio Website",
     description:
@@ -30,37 +13,12 @@ const PROJECTS = [
     link: "https://rafiulhoque.netlify.app/",
     image: project3,
   },
-  
   {
-    title: "Doctor Appointment System",
+    title: "E-Commerce Website",
     description:
-      "A web application for scheduling doctor appointments, with user authentication and real-time notifications.",
-    technologies: ["HTML", "CSS", "Tailwind", "JavaScript", "React", "Firebase"],
-    link: "https://example.com/doctor-appointment",
-    image: project4,
-  },
-  {
-    title: "School Management System",
-    description:
-      "A comprehensive web application for managing student records, classes, and attendance.",
-    technologies: ["HTML", "CSS", "Tailwind"],
-    link: "https://cantschoolmanagement.netlify.app/",
-    image: project4,
-  },
-  {
-    title: "QR Code Generator",
-    description:
-      "A simple web application that generates QR codes for URLs or text inputs using JavaScript and HTML.",
-    technologies: ["HTML", "CSS", "JavaScript", "Tailwind"],
-    link: "https://codegenerator001.netlify.app",
-    image: project1,
-  },
-  {
-    title: "Expense Tracker",
-    description:
-      "An application that helps users track their expenses, manage budgets, and analyze spending patterns.",
-    technologies: ["HTML", "CSS", "JavaScript", "React", "Node.js"],
-    link: "https://example.com/expense-tracker",
+      "A fully functional e-commerce website with features like product listing, shopping cart, and user authentication.",
+    technologies: ["HTML", "CSS", "React", "Nodejs", "MongoDB"],
+    link: "https://example.com/e-commerce",
     image: project1,
   },
   {
@@ -87,6 +45,38 @@ const PROJECTS = [
     link: "https://example.com/diabetes-prediction",
     image: project1,
   },
+  {
+    title: "Doctor Appointment System",
+    description:
+      "A web application for scheduling doctor appointments, with user authentication and real-time notifications.",
+    technologies: ["HTML", "CSS", "Tailwind", "JavaScript", "React", "Firebase"],
+    link: "https://github.com/hoque21/Doctors-Appointment-Project-Client-site-",
+    image: project4,
+  },
+  {
+    title: "School Management System",
+    description:
+      "A comprehensive web application for managing student records, classes, and attendance.",
+    technologies: ["HTML", "CSS", "Tailwind"],
+    link: "https://cantschoolmanagement.netlify.app/",
+    image: project4,
+  },
+  {
+    title: "QR Code Generator",
+    description:
+      "A simple web application that generates QR codes for URLs or text inputs using JavaScript and HTML.",
+    technologies: ["HTML", "CSS", "JavaScript", "Tailwind"],
+    link: "https://codegenerator001.netlify.app",
+    image: project1,
+  },
+  {
+    title: "Expense Tracker",
+    description:
+      "An application that helps users track their expenses, manage budgets, and analyze spending patterns.",
+    technologies: ["HTML", "CSS", "JavaScript", "React", "Node.js"],
+    link: "https://example.com/expense-tracker",
+    image: project1,
+  },
 ];
 
 const Projects = () => {
@@ -106,7 +96,7 @@ const Projects = () => {
   return (
     <section ref={sectionRef} className="py-10">
       <motion.h2
-        className="my-20 text-center text-4xl font-bold"
+        className="my-20 text-center text-4xl font-bold text-white"
         initial={{ opacity: 0, y: -50 }}
         animate={isSectionInView ? { opacity: 1, y: 0 } : { opacity: 0, y: -50 }}
         transition={{ duration: 0.6 }}
@@ -118,7 +108,7 @@ const Projects = () => {
         {PROJECTS.slice(0, visibleCount).map((project, index) => (
           <motion.div
             key={index}
-            className="mb-6 p-6 border rounded-lg shadow-md w-full max-w-4xl"
+            className="mb-6 p-6 border border-gray-600 rounded-lg shadow-md w-full max-w-4xl "
             initial={{ opacity: 0, scale: 0.9, y: 30 }}
             animate={{ opacity: 1, scale: 1, y: 0 }}
             transition={{ duration: 0.5, delay: index * 0.2 }}
@@ -127,16 +117,16 @@ const Projects = () => {
             <div className="flex items-center">
               <img src={project.image} alt={project.title} className="w-32 h-32 mr-4 rounded" />
               <div>
-                <h3 className="text-xl font-semibold">{project.title}</h3>
-                <p className="mt-2">{project.description}</p>
-                <div className="mt-2">
+                <h3 className="text-xl font-semibold text-white">{project.title}</h3>
+                <p className="mt-2 text-gray-300">{project.description}</p>
+                <div className="mt-2 text-gray-400">
                   <strong>Technologies:</strong> {project.technologies.join(", ")}
                 </div>
                 <a
                   href={project.link}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-blue-500 mt-2 inline-block"
+                  className="mt-4 inline-block px-4 py-2 text-sm font-semibold text-white bg-[#00091d] rounded-full shadow-lg transition duration-300 ease-in-out hover:bg-[#1a2a40] hover:shadow-xl focus:ring-4 focus:ring-blue-300"
                 >
                   View Project
                 </a>
@@ -152,7 +142,7 @@ const Projects = () => {
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.4 }}
-            className="text-lg text-gray-700"
+            className="text-lg text-gray-400"
           >
             Loading...
           </motion.div>

@@ -106,7 +106,7 @@ export const EDUCATION = [
     institution: "Green University Of Bangladesh",
     institutionLink: "https://www.green.edu.bd/",
     year: "2020 - 2024",
-    Result:"CGPA:3.20",
+    Result:"CGPA : 3.20",
     description: "Focused on software development, data structures and Machine Learning.",
     
   },
@@ -115,7 +115,7 @@ export const EDUCATION = [
     institution: "Government Science College",
     institutionLink: "https://www.gsctd.edu.bd/",
     year: "2017 - 2019",
-    Result:"GPA:4.50",
+    Result:"GPA : 4.50",
     description:"Science",
   },
   {
@@ -123,7 +123,7 @@ export const EDUCATION = [
     institution: "Liaquat Ali Smriti School and College",
     institutionLink: "",
     year: "2012 - 2017",
-    Result:"GPA:5.00",
+    Result:"GPA : 5.00",
     description:"Science",
   },
   
