@@ -18,7 +18,7 @@ const PROJECTS = [
     description:
       "A fully functional e-commerce website with features like product listing, shopping cart, and user authentication.",
     technologies: ["HTML", "CSS", "React", "Nodejs", "MongoDB"],
-    link: "https://example.com/e-commerce",
+    link: "https://github.com/hoque21/Bazar-E-commerce-Site-",
     image: project1,
   },
   {
@@ -34,7 +34,7 @@ const PROJECTS = [
     description:
       "An AI-based application that predicts the likelihood of heart disease in patients based on medical data.",
     technologies: ["Python", "TensorFlow", "Machine Learning"],
-    link: "https://example.com/heart-disease-prediction",
+    link: "https://github.com/hoque21/Heart-Disease-Prediction",
     image: project1,
   },
   {
@@ -81,7 +81,7 @@ const PROJECTS = [
 
 const Projects = () => {
   const [visibleCount, setVisibleCount] = useState(3);
-  const [loading, setLoading] = useState(false); // State to manage loading
+  const [loading, setLoading] = useState(false); // Loading state for "Show More" button
   const sectionRef = useRef(null);
   const isSectionInView = useInView(sectionRef, { triggerOnce: false, threshold: 0.2 });
 
@@ -89,14 +89,14 @@ const Projects = () => {
     setLoading(true); // Set loading to true
     setTimeout(() => {
       setVisibleCount((prevCount) => Math.min(prevCount + 3, PROJECTS.length));
-      setLoading(false); // Set loading to false after the timeout
-    }, 1000); // Simulate loading time
+      setLoading(false); // Reset loading after timeout
+    }, 1000); // Simulated loading time
   };
 
   return (
     <section ref={sectionRef} className="py-10">
       <motion.h2
-        className="my-20 text-center text-4xl font-bold text-white"
+        className="my-20 text-center text-4xl font-bold text-[#cdd7f6]"
         initial={{ opacity: 0, y: -50 }}
         animate={isSectionInView ? { opacity: 1, y: 0 } : { opacity: 0, y: -50 }}
         transition={{ duration: 0.6 }}
@@ -108,7 +108,7 @@ const Projects = () => {
         {PROJECTS.slice(0, visibleCount).map((project, index) => (
           <motion.div
             key={index}
-            className="mb-6 p-6 border border-gray-600 rounded-lg shadow-md w-full max-w-4xl"
+            className="mb-8 p-6 border border-[#1a2a40] rounded-lg shadow-md w-full max-w-4xl bg-[#121828]"
             initial={{ opacity: 0, scale: 0.9, y: 30 }}
             animate={{ opacity: 1, scale: 1, y: 0 }}
             transition={{ duration: 0.5, delay: index * 0.2 }}
@@ -117,17 +117,17 @@ const Projects = () => {
             <div className="flex items-center">
               <img src={project.image} alt={project.title} className="w-32 h-32 mr-4 rounded" />
               <div>
-                <h3 className="text-xl font-semibold text-white">{project.title}</h3>
-                <p className="mt-2 text-gray-300">{project.description}</p>
-                <div className="mt-2 text-gray-400">
+                <h3 className="text-xl font-semibold text-[#e0e6f6]">{project.title}</h3>
+                <p className="mt-2 text-[#a4acc4]">{project.description}</p>
+                <div className="mt-2 text-[#93a4c6]">
                   <strong>Technologies:</strong> {project.technologies.join(", ")}
                 </div>
-                <div className="mt-4 flex"> {/* Centered Button Wrapper */}
+                <div className="mt-4 flex">
                   <a
                     href={project.link}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="px-4 py-2 text-sm font-semibold text-white bg-[#00091d] rounded-full shadow-lg transition duration-300 ease-in-out hover:bg-[#1a2a40] hover:shadow-xl focus:ring-4 focus:ring-blue-300"
+                    className="px-4 py-2 text-sm font-semibold text-[#f0f6ff] bg-[#1a2a40] rounded-full shadow-lg transition duration-300 ease-in-out hover:bg-[#253a52] hover:shadow-xl focus:ring-4 focus:ring-blue-300"
                   >
                     View Project
                   </a>
@@ -138,13 +138,13 @@ const Projects = () => {
         ))}
       </div>
 
-      {loading ? ( // Conditional rendering for loading state
+      {loading ? (
         <div className="flex justify-center mt-6">
           <motion.div
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.4 }}
-            className="text-lg text-gray-400"
+            className="text-lg text-[#a4acc4]"
           >
             Loading...
           </motion.div>
@@ -154,7 +154,7 @@ const Projects = () => {
           <div className="flex justify-center mt-6">
             <motion.button
               onClick={handleShowMore}
-              className="bg-[#00000080] rounded-full px-4 py-2 text-sm text-white border border-[#ffffff33] transition duration-300 ease-in-out hover:bg-[#00000099] hover:text-[#ffffff] hover:border-[#ffffff]"
+              className="bg-[#1a2a40] rounded-full px-4 py-2 text-sm text-[#cdd7f6] border border-[#293b55] transition duration-300 ease-in-out hover:bg-[#253a52] hover:text-[#e0e6f6] hover:border-[#e0e6f6]"
               initial={{ x: 100, opacity: 0 }}
               animate={{ x: 0, opacity: 1, scale: [1, 1.1, 1] }}
               transition={{
