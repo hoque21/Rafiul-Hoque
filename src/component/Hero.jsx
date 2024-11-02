@@ -40,7 +40,7 @@ const Hero = () => {
         // Programmatically trigger the download
         const link = document.createElement('a');
         link.href = Resume;
-        link.download = 'Rafiul_Hoque_Resume.pdf';
+        link.download = 'Rafiul_Hoque.pdf';
         document.body.appendChild(link);
         link.click();
         document.body.removeChild(link);
