@@ -6,6 +6,13 @@ const Experience = () => {
   const sectionRef = useRef(null);
   const isSectionInView = useInView(sectionRef, { triggerOnce: false, threshold: 0.2 });
 
+  const handleDownloadClick = (url) => {
+    const newTab = window.open(url, '_blank', 'noopener,noreferrer');
+    if (newTab) {
+      newTab.focus();
+    }
+  };
+
   return (
     <div ref={sectionRef} className='pb-4'>
       <motion.h2
@@ -81,9 +88,8 @@ const Experience = () => {
 
                 {/* Certificate Download Button */}
                 {experience.certificate && (
-                  <motion.a
-                    href={experience.certificate}
-                    download
+                  <motion.button
+                    onClick={() => handleDownloadClick(experience.certificate)}
                     className='mt-4 inline-block bg-[#00000080] rounded-full px-4 py-2 text-sm text-white border border-[#ffffff33] transition duration-300 ease-in-out hover:bg-[#00000099] hover:text-[#ffffff] hover:border-[#ffffff]'
                     aria-label={`Download certificate for ${experience.role}`}
                     initial={{ opacity: 0 }}
@@ -92,7 +98,7 @@ const Experience = () => {
                     whileHover={{ scale: 1.1 }}
                   >
                     Download Certificate
-                  </motion.a>
+                  </motion.button>
                 )}
               </div>
             </motion.div>
