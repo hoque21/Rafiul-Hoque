@@ -7,16 +7,19 @@ export const HERO_CONTENT = `I am a passionate full stack developer with a knack
 
 export const ABOUT_TEXT = `I am a dedicated and versatile full stack developer with a passion for creating efficient and user-friendly web applications. With 5 years of professional experience, I have worked with a variety of technologies, including React, Next.js, Node.js, MySQL, PostgreSQL, and MongoDB. My journey in web development began with a deep curiosity for how things work, and it has evolved into a career where I continuously strive to learn and adapt to new challenges. I thrive in collaborative environments and enjoy solving complex problems to deliver high-quality solutions. Outside of coding, I enjoy staying active, exploring new technologies, and contributing to open-source projects.`;
 
+// Example constant file (constants.js)
 export const EXPERIENCES = [
   {
-    year: "2023 - 2024",
-    role: "Front End Developer",
-    company: "MMIT Soft LTD.",
-    description: `Led a team in developing and maintaining web applications using JavaScript, React.js, and Node.js.`,
-    technologies: ["Javascript", "React.js", "Node.js", "mySql","Tailwind"],
-    certificate: "/src/assets/zila.pdf",
+    year: "2023",
+    role: "Frontend Developer",
+    company: "Tech Corp",
+    description: "Worked on building scalable frontend applications.",
+    technologies: ["React", "JavaScript", "CSS"],
+    certificate: "https://drive.google.com/uc?export=download&id=1tCvKPyC2yuUT4CWhfvTkzzh1lZLyp_wH"
   },
+  // Add other experiences as needed
 ];
+
 
 // export const PROJECTS = [
 //   {
