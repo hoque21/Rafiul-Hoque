@@ -79,8 +79,8 @@ export const PUBLICATION = [
   },
   {
     title: `Estimation of Postpartum Morbidities and Risk Factors of Women Presented for Postpartum Visit at a MOU, eThekwini, South Africa`,
-    journalName: '', // Placeholder if journal is not known yet
-    journalLink: '', // Leave blank or add the journal's link if available
+    journalName: 'Southern African Journal of Public Health', // Placeholder if journal is not known yet
+    journalLink: 'https://samajournals.co.za/index.php/sajph', // Leave blank or add the journal's link if available
     technologies: ["Data Analysis", "Epidemiology"],
     status: 'Submitted and under review', // Adjust status as needed
   }
