@@ -1,8 +1,6 @@
 import React, { useRef } from 'react';
 import { motion, useInView } from 'framer-motion';
-import Swal from 'sweetalert2';
-import Resume from '../assets/Rafiul Hoque.pdf'; // Path to the certificate
-import GUB from '../assets/GUB.jpg'; // Image for SweetAlert
+import GUB from '../assets/GUB.jpg'; // Image for any future use (if needed)
 
 const Award = () => {
   const sectionRef = useRef(null); // Reference to the Awards section
@@ -14,54 +12,14 @@ const Award = () => {
       title: "Creative Talent Search Competition",
       description: "Awarded 'Best Talent of the Year' in 2014 for outstanding performance in Mathematics and Computer at the Upazila-level Creative Talent Search Competition. Recognized for excellence among school-level students.",
       topic: ["Mathematics & Computer"],
-      certificate: Resume // Using the correct path for the certificate
+      certificate: "https://drive.google.com/file/d/1Sray2NxhvUk7_pZ_pAvvvDUcIPUTZHiM/view?usp=drive_link" // Using the correct path for the certificate
     },
     // Add more awards as needed
   ];
 
-  // Function to handle download and show SweetAlert
-  const handleDownload = (e, certificate) => {
-    e.preventDefault(); // Prevent the default anchor click behavior
-
-    // Customizing SweetAlert with HTML and buttons
-    Swal.fire({
-      title: 'Success!',
-      html: `
-        <div style="text-align: center;">
-          <p>Your certificate is being downloaded.</p>
-          <p style="margin: 10px 0;"><strong>Award Certificate</strong></p>
-          <img src="${GUB}" alt="Rafiul Hoque" style="width: 100px; border-radius: 50%; border: 2px solid #4CAF50;" />
-          <p>Thank you</p>
-        </div>
-      `,
-      icon: 'success',
-      showConfirmButton: false,
-      timer: 3000, // Alert will disappear after 3 seconds
-      backdrop: `
-        rgba(0,0,123,0.4)
-        url("../assets/download.gif") // Adjust to your GIF path
-        left top
-        no-repeat
-      `,
-      willOpen: () => {
-        Swal.showLoading(); // Show loading animation
-      },
-      didOpen: () => {
-        // Programmatically trigger the download
-        const link = document.createElement('a');
-        link.href = certificate; // Use the certificate URL passed as argument
-        link.download = 'Rafiul_Hoque_Certificate.pdf'; // Specify the name of the downloaded file
-        document.body.appendChild(link);
-        link.click(); // Simulate a click to trigger the download
-        document.body.removeChild(link); // Clean up
-      },
-      customClass: {
-        title: 'swal-title',
-        html: 'swal-html',
-        popup: 'swal-popup',
-        confirmButton: 'swal-confirm'
-      },
-    });
+  // Function to handle download directly
+  const handleDownload = (certificate) => {
+    window.open(certificate, '_blank', 'noopener,noreferrer'); // Open the certificate in a new tab
   };
 
   return (
@@ -127,7 +85,7 @@ const Award = () => {
                 </motion.ul>
                 {/* Download Certificate Button */}
                 <button
-                  onClick={(e) => handleDownload(e, award.certificate)}
+                  onClick={() => handleDownload(award.certificate)} // Call handleDownload without event
                   className="ml-6 bg-[#00000080] rounded-full px-4 py-2 text-sm text-white border border-[#ffffff33] transition duration-300 ease-in-out hover:bg-[#00000099] hover:text-[#ffffff] hover:border-[#ffffff]"
                   aria-label={`Download certificate for ${award.title}`}
                 >
