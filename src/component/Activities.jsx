@@ -6,19 +6,19 @@ const ACTIVITIES = [
     title: "3rd Baliakandi Upzila Scout Samabesh",
     description: "Participated in the 3rd Baliakandi Upzila Scout Samabesh-2015, fostering leadership and teamwork skills.",
     technologies: ["Leadership", "Teamwork", "Community Engagement"],
-    certificate: "/src/assets/3rdB.pdf",
+    certificate: "https://drive.google.com/file/d/1ttukomZyK25ET-lAHd4Go6s3zHTmJ-Mv/view?usp=drive_link",
   },
   {
     title: "3rd Zila Scout Samabesh",
     description: "Engaged in the 3rd Zila Scout Samabesh-2016, promoting scouting values and community service.",
     technologies: ["Community Service", "Event Participation", "Scouting Skills"],
-    certificate: "/src/assets/zila.pdf",
+    certificate: "https://drive.google.com/file/d/1-h4v43Hzi6U6HmFei6PgUTs1hVJZqF0w/view?usp=drive_link",
   },
   {
     title: "4th National Power & Energy Camp",
     description: "Attended the 4th National Power & Energy Camp 2015, focusing on renewable energy and sustainability.",
     technologies: ["Renewable Energy", "Sustainability Education", "Team Collaboration"],
-    certificate: "/src/assets/Power.pdf",
+    certificate: "https://drive.google.com/file/d/1tCvKPyC2yuUT4CWhfvTkzzh1lZLyp_wH/view?usp=drive_link",
   },
   {
     title: "DUSS Science Festival",
@@ -30,13 +30,13 @@ const ACTIVITIES = [
     title: "1st GSCPC National Photography Festival",
     description: "Competed in the 1st GSCPC National Photography Festival-2018, highlighting photography skills.",
     technologies: ["Photography", "Artistic Expression", "Visual Storytelling"],
-    certificate: "/src/assets/GSCPC.pdf",
+    certificate: "https://drive.google.com/file/d/1aad6oNGWEsqzWQVd_KnV5Ac6pb8Wfn9F/view?usp=drive_link",
   },
   {
     title: "Graphic Design Course",
     description: "Received a certificate of achievement for the successful completion of a 3-month Graphic Design Course at Good Approach.",
     technologies: ["Graphic Design", "Digital Art", "Creativity"],
-    certificate: "/src/assets/creative.pdf",
+    certificate: "https://drive.google.com/file/d/1ITTXMbjnS9cHfcQgYY-TF4EH4SfGpWZX/view?usp=drive_link",
   },
 ];
 
@@ -94,7 +94,8 @@ const Activities = () => {
               </p>
               <a
                 href={activity.certificate}
-                download
+                target="_blank"
+                rel="noopener noreferrer"
                 className="ml-6 bg-[#00000080] rounded-full px-4 py-2 text-sm text-white border border-[#ffffff33] transition duration-300 ease-in-out hover:bg-[#00000099] hover:text-[#ffffff] hover:border-[#ffffff]"
                 aria-label={`Download certificate for ${activity.title}`}
               >
