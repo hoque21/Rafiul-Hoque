@@ -67,17 +67,23 @@ export const PUBLICATION = [
     title: `Depressive and Suicidal Text-Based Sentiment Analysis In Bangla Using Deep Learning Models.`,
     journalName: 'Business & IT',
     journalLink: "https://bit.fsv.cvut.cz/",
-    technologies: ["Python", "Natural Language Processing Toolkit",],
-    status: 'Submitted and under review', // Add status field
+    technologies: ["Python", "Natural Language Processing Toolkit"],
+    status: 'Submitted and under review',
   },
   {
     title: `Transformer-Based Sentiment Analysis for Classification Non-depressive and Suicidal Thought in Bangla Text.`,
     journalName: 'Heliyon',
     journalLink: "https://www.cell.com/heliyon/home",
-    technologies: ["Python", "Natural Language Processing Toolkit",],
-    status: 'Submitted and under review', // Add status field
+    technologies: ["Python", "Natural Language Processing Toolkit"],
+    status: 'Submitted and under review',
   },
-  
+  {
+    title: `Estimation of Postpartum Morbidities and Risk Factors of Women Presented for Postpartum Visit at a MOU, eThekwini, South Africa`,
+    journalName: '', // Placeholder if journal is not known yet
+    journalLink: '', // Leave blank or add the journal's link if available
+    technologies: ["Data Analysis", "Epidemiology"],
+    status: 'Submitted and under review', // Adjust status as needed
+  }
 ];
 
 // Example of updated publication data
