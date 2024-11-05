@@ -140,18 +140,18 @@ export const EDUCATION = [
 // Education Reference data array
 export const EDUCATION_REFERENCES = [
   {
-    name: "Mr x",
-    position: "Professor of Computer Science",
-    institution: "University of Technology",
-    contact: "jane.smith@unitech.edu",
+    name: "Mohammad Ehsan Shahmi Chowdhury",
+    position: "Assistant Professor of Computer Science",
+    institution: "Green University Of Bangladesh",
+    contact: "ehsan@cse.green.edu.bd",
     relationship: "Academic Advisor",
   },
   {
-    name: "Mr x",
-    position: "Professor of Computer Science",
-    institution: "University of Technology",
-    contact: "jane.smith@unitech.edu",
-    relationship: "Academic Advisor",
+    name: "Md. Moshiur Rahman",
+    position: "Lecturer of Computer Science",
+    institution: "Bangabandhu Sheikh Mujibur Rahman Digital University",
+    contact: "moshiur0001@bdu.ac.bd",
+    relationship: "Research Supervisor",
   },
   
   
