@@ -42,7 +42,7 @@ const PROJECTS = [
     description:
       "An application that uses artificial intelligence to predict the risk of diabetes in individuals based on health metrics.",
     technologies: ["Python", "Scikit-Learn", "Machine Learning"],
-    link: "https://example.com/diabetes-prediction",
+    link: "https://github.com/hoque21/Diabetes_Prediction",
     image: project1,
   },
   {
