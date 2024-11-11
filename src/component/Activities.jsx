@@ -38,6 +38,12 @@ const ACTIVITIES = [
     technologies: ["Graphic Design", "Digital Art", "Creativity"],
     certificate: "https://drive.google.com/file/d/1ITTXMbjnS9cHfcQgYY-TF4EH4SfGpWZX/view?usp=drive_link",
   },
+  {
+    title: "Career Webinar Participation",
+    description: "Successfully participated in the webinar titled 'Job এর জন্য নিজেকে কিভাবে Shortlist করবেন?'.",
+    technologies: ["Career Development", "Job Application Tips", "Professional Skills"],
+    certificate: "https://drive.google.com/file/d/1lecgzXVES4867ZQagpALC2v65-dVM4Vp/view?usp=drive_link"
+  }
 ];
 
 const Activities = () => {
