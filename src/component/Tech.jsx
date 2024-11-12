@@ -22,7 +22,7 @@ const Tech = () => {
     { icon: <SiTailwindcss className='text-7xl' style={{ color: '#06B6D4' }} />, label: 'Tailwind CSS' },
     { icon: <SiSqlite className='text-7xl' style={{ color: '#003B57' }} />, label: 'SQL' },
     { icon: <FaGitAlt className='text-7xl' style={{ color: '#F05033' }} />, label: 'Git' },
-    { icon: <MdCloud className='text-7xl text-orange-500' />, label: 'Firebase' },git 
+    { icon: <MdCloud className='text-7xl text-orange-500' />, label: 'Firebase' },
     { icon: <SiJira className='text-7xl' style={{ color: '#0052CC' }} />, label: 'Jira' },
     { icon: <MdOutlineApi className='text-7xl' style={{ color: '#6B7280' }} />, label: 'Postman' },
   ];
