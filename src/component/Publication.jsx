@@ -10,7 +10,7 @@ const Publication = () => {
     <div ref={sectionRef} className="p-4"> {/* Add padding for better spacing */}
       {/* Animated Section Title */}
       <motion.h2
-        className='my-20 text-center text-4xl'
+        className='my-20 font-bold text-center text-4xl'
         initial={{ opacity: 0, y: -50 }}
         animate={isSectionInView ? { opacity: 1, y: 0 } : { opacity: 0, y: -50 }} // Animate based on scroll
         transition={{ duration: 0.6 }}
@@ -49,7 +49,7 @@ const Publication = () => {
               <p className="mt-2">
                 <strong>Technologies Used:</strong> {pub.technologies.join(", ")} {/* Technologies */}
               </p>
-              <p className="mt-2">
+              <p className="mt-2 font-semibold">
                 <strong>Status:</strong> {pub.status} {/* Journal name */}
               </p>
             </motion.div>

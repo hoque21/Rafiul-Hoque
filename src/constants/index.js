@@ -9,7 +9,7 @@ export const ABOUT_TEXT = `I am a dedicated and versatile full stack developer w
 
 export const EXPERIENCES = [
   {
-    year: "2023 - 2024",
+    year: "December 2023 - February 2024",
     role: "Front End Developer",
     company: "MMIT Soft LTD.",
     description: `Led a team in developing and maintaining web applications using JavaScript, React.js, and Node.js.`,
@@ -68,21 +68,21 @@ export const PUBLICATION = [
     journalName: 'Business & IT',
     journalLink: "https://bit.fsv.cvut.cz/",
     technologies: ["Python", "Natural Language Processing Toolkit"],
-    status: 'Submitted and under review',
+    status: 'Under review',
   },
   {
     title: `Transformer-Based Sentiment Analysis for Classification Non-depressive and Suicidal Thought in Bangla Text.`,
     journalName: 'Heliyon',
     journalLink: "https://www.cell.com/heliyon/home",
     technologies: ["Python", "Natural Language Processing Toolkit"],
-    status: 'Submitted and under review',
+    status: 'Under review',
   },
   {
     title: `Estimation of Postpartum Morbidities and Risk Factors of Women Presented for Postpartum Visit at a MOU, eThekwini, South Africa`,
     journalName: 'Southern African Journal of Public Health', // Placeholder if journal is not known yet
     journalLink: 'https://samajournals.co.za/index.php/sajph', // Leave blank or add the journal's link if available
     technologies: ["Data Analysis", "Epidemiology"],
-    status: 'Submitted and under review', // Adjust status as needed
+    status: 'Under review', // Adjust status as needed
   }
 ];
 
@@ -113,6 +113,7 @@ export const EDUCATION = [
     institutionLink: "https://www.green.edu.bd/",
     year: "2020 - 2024",
     Result:"CGPA : 3.20",
+    major:"Machine Learning",
     description: "Focused on software development, data structures and Machine Learning.",
     
   },
@@ -122,7 +123,7 @@ export const EDUCATION = [
     institutionLink: "https://www.gsctd.edu.bd/",
     year: "2017 - 2019",
     Result:"GPA : 4.50",
-    description:"Science",
+    major:"Science",
   },
   {
     degree: " Secondary School Certificate",
@@ -130,7 +131,7 @@ export const EDUCATION = [
     institutionLink: "",
     year: "2012 - 2017",
     Result:"GPA : 5.00",
-    description:"Science",
+    major:"Science",
   },
   
 ];

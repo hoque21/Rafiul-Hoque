@@ -95,10 +95,11 @@ const Navbar = ({ scrollToSection, refs }) => {
         <a href="/" className="hover:text-blue-500">Home</a>
         <a onClick={() => scrollToSection(refs.techRef)} className="cursor-pointer hover:text-blue-500">Skills</a>
         <a onClick={() => scrollToSection(refs.projectsRef)} className="cursor-pointer hover:text-blue-500">Projects</a>
+        <a onClick={() => scrollToSection(refs.educationRef)} className="cursor-pointer hover:text-blue-500">Education</a>
         <a onClick={() => scrollToSection(refs.experienceRef)} className="cursor-pointer hover:text-blue-500">Experience</a>
         <a onClick={() => scrollToSection(refs.publicationRef)} className="cursor-pointer hover:text-blue-500">Publication</a>
         <a onClick={() => scrollToSection(refs.researchRef)} className="cursor-pointer hover:text-blue-500">Research Work</a>
-        <a onClick={() => scrollToSection(refs.educationRef)} className="cursor-pointer hover:text-blue-500">Education</a>
+
         <a onClick={() => scrollToSection(refs.activitiesRef)} className="cursor-pointer hover:text-blue-500">Activities</a>
         <a onClick={() => scrollToSection(refs.awardsRef)} className="cursor-pointer hover:text-blue-500">Awards</a>
       </div>
@@ -128,10 +129,11 @@ const Navbar = ({ scrollToSection, refs }) => {
               <a href="/" onClick={() => setIsOpen(false)} className="hover:text-blue-400">Home</a>
               <a onClick={() => { scrollToSection(refs.techRef); setIsOpen(false); }} className="cursor-pointer hover:text-blue-400">Skills</a>
               <a onClick={() => { scrollToSection(refs.projectsRef); setIsOpen(false); }} className="cursor-pointer hover:text-blue-400">Projects</a>
+              <a onClick={() => { scrollToSection(refs.educationRef); setIsOpen(false); }} className="cursor-pointer hover:text-blue-400">Education</a>
               <a onClick={() => { scrollToSection(refs.experienceRef); setIsOpen(false); }} className="cursor-pointer hover:text-blue-400">Experience</a>
               <a onClick={() => { scrollToSection(refs.publicationRef); setIsOpen(false); }} className="cursor-pointer hover:text-blue-400">Publication</a>
               <a onClick={() => { scrollToSection(refs.researchRef); setIsOpen(false); }} className="cursor-pointer hover:text-blue-400">Research Work</a>
-              <a onClick={() => { scrollToSection(refs.educationRef); setIsOpen(false); }} className="cursor-pointer hover:text-blue-400">Education</a>
+
               <a onClick={() => { scrollToSection(refs.activitiesRef); setIsOpen(false); }} className="cursor-pointer hover:text-blue-400">Activities</a>
               <a onClick={() => { scrollToSection(refs.awardsRef); setIsOpen(false); }} className="cursor-pointer hover:text-blue-400">Awards</a>
             </motion.div>

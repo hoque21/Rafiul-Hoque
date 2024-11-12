@@ -8,9 +8,9 @@ const Footer = () => {
 
   return (
     <footer ref={footerRef} className='bg-gray-800 text-white py-6 md:py-10'>
-      <div className='container mx-auto flex flex-col items-center px-4 sm:px-6'>
+      <div className='container mx-auto flex flex-col items-center  px-4 sm:px-6'>
         <motion.h2
-          className='text-xl sm:text-2xl mb-4'
+          className='text-xl sm:text-2xl font-bold mb-4'
           initial={{ opacity: 0, y: 50 }}
           animate={isFooterInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
           transition={{ duration: 0.5 }}

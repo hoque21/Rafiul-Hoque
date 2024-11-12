@@ -18,10 +18,10 @@ const App = () => {
   const heroRef = useRef(null);
   const techRef = useRef(null);
   const projectsRef = useRef(null);
+  const educationRef = useRef(null);
   const experienceRef = useRef(null);
   const publicationRef = useRef(null);
   const researchRef = useRef(null);
-  const educationRef = useRef(null);
   const referenceRef = useRef(null);
   const activitiesRef = useRef(null); 
   const contractsRef = useRef(null); 
@@ -46,10 +46,10 @@ const App = () => {
             heroRef,
             techRef,
             projectsRef,
+            educationRef,
             experienceRef,
             publicationRef,
             researchRef,
-            educationRef,
             referenceRef,
             activitiesRef, 
             contractsRef,
@@ -60,10 +60,11 @@ const App = () => {
         <div ref={heroRef}><Hero /></div>
         <div ref={techRef}><Tech /></div>
         <div ref={projectsRef}><Projects /></div>
+        <div ref={educationRef}><Education /></div>
         <div ref={experienceRef}><Experience /></div>
         <div ref={publicationRef}><Publication /></div>
         <div ref={researchRef}><Research /></div>
-        <div ref={educationRef}><Education /></div>
+        
         <div ref={activitiesRef}><Activities /></div> 
         <div ref={interestsRef}><Interests /></div> 
         <div ref={awardsRef}><Award /></div> 

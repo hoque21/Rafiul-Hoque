@@ -10,7 +10,7 @@ const Education = () => {
     <div ref={sectionRef} className="p-4"> {/* Add padding for better spacing */}
       {/* Animated Section Title */}
       <motion.h2
-        className='my-20 text-center text-4xl'
+        className='my-20 text-center text-4xl font-bold'
         initial={{ opacity: 0, y: -50 }}
         animate={isSectionInView ? { opacity: 1, y: 0 } : { opacity: 0, y: -50 }} // Animate based on scroll
         transition={{ duration: 0.6 }}
@@ -89,6 +89,12 @@ const Education = () => {
                   </motion.div>
                 )}
               </div>
+              {edu.major && (
+                <p className="mt-2">
+                  <strong>Major:</strong> {edu.major} {/* Description */}
+                </p>
+              )}
+
               {edu.description && (
                 <p className="mt-2">
                   <strong>Description:</strong> {edu.description} {/* Description */}

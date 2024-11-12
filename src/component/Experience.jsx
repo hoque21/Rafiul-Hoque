@@ -16,7 +16,7 @@ const Experience = () => {
   return (
     <div ref={sectionRef} className='pb-4'>
       <motion.h2
-        className='my-20 text-center text-4xl'
+        className='my-20 text-center font-bold text-4xl'
         initial={{ opacity: 0, y: -50 }}
         animate={isSectionInView ? { opacity: 1, y: 0 } : { opacity: 0, y: -50 }}
         transition={{ duration: 0.6 }}
