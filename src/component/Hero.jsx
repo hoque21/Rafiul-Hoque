@@ -1,7 +1,7 @@
 import React, { useRef } from 'react';
 import { motion, useInView } from 'framer-motion';
 import Swal from 'sweetalert2';
-import GUB from '../assets/GUB.jpg'; // Image of Rafiul
+import GUB from '../assets/Rafiul.jpg'; // Image of Rafiul
 import Resume from '../assets/Rafiul Hoque.pdf'; // Link to the resume
 
 const Hero = () => {
@@ -115,7 +115,7 @@ const Hero = () => {
           <img 
             src={GUB} 
             alt="Rafiul Hoque" 
-            className='border border-stone-900 rounded-3xl max-w-[300px] lg:max-w-[400px]' 
+            className='border border-stone-900 rounded-3xl max-w-[200px] lg:max-w-[300px]' 
           />
         </motion.div>
 
