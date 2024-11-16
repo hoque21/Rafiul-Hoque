@@ -68,11 +68,11 @@ export const PUBLICATION = [
     journalName: 'Business & IT',
     journalLink: "https://bit.fsv.cvut.cz/",
     technologies: ["Python", "Natural Language Processing Toolkit"],
-    status: 'Under review',
+    status: 'Accepted',
   },
   {
     title: `Transformer-Based Sentiment Analysis for Classification Non-depressive and Suicidal Thought in Bangla Text.`,
-    journalName: 'Heliyon',
+   
     journalLink: "https://www.cell.com/heliyon/home",
     technologies: ["Python", "Natural Language Processing Toolkit"],
     status: 'Under review',

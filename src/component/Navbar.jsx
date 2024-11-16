@@ -92,16 +92,33 @@ const Navbar = ({ scrollToSection, refs }) => {
 
       {/* Navigation Links for Desktop */}
       <div className="hidden lg:flex gap-8 text-lg">
-        <a href="/" className="hover:text-blue-500">Home</a>
-        <a onClick={() => scrollToSection(refs.techRef)} className="cursor-pointer hover:text-blue-500">Skills</a>
-        <a onClick={() => scrollToSection(refs.projectsRef)} className="cursor-pointer hover:text-blue-500">Projects</a>
-        <a onClick={() => scrollToSection(refs.educationRef)} className="cursor-pointer hover:text-blue-500">Education</a>
-        <a onClick={() => scrollToSection(refs.experienceRef)} className="cursor-pointer hover:text-blue-500">Experience</a>
-        <a onClick={() => scrollToSection(refs.publicationRef)} className="cursor-pointer hover:text-blue-500">Publication</a>
-        <a onClick={() => scrollToSection(refs.researchRef)} className="cursor-pointer hover:text-blue-500">Research Work</a>
-
-        <a onClick={() => scrollToSection(refs.activitiesRef)} className="cursor-pointer hover:text-blue-500">Activities</a>
-        <a onClick={() => scrollToSection(refs.awardsRef)} className="cursor-pointer hover:text-blue-500">Awards</a>
+        <a href="/" className="hover:text-blue-500 transition-colors duration-300 hover:underline">
+          Home
+        </a>
+        <a onClick={() => scrollToSection(refs.techRef)} className="cursor-pointer hover:text-blue-500 transition-colors duration-300 hover:underline">
+          Skills
+        </a>
+        <a onClick={() => scrollToSection(refs.projectsRef)} className="cursor-pointer hover:text-blue-500 transition-colors duration-300 hover:underline">
+          Projects
+        </a>
+        <a onClick={() => scrollToSection(refs.educationRef)} className="cursor-pointer hover:text-blue-500 transition-colors duration-300 hover:underline">
+          Education
+        </a>
+        <a onClick={() => scrollToSection(refs.experienceRef)} className="cursor-pointer hover:text-blue-500 transition-colors duration-300 hover:underline">
+          Experience
+        </a>
+        <a onClick={() => scrollToSection(refs.publicationRef)} className="cursor-pointer hover:text-blue-500 transition-colors duration-300 hover:underline">
+          Publication
+        </a>
+        <a onClick={() => scrollToSection(refs.researchRef)} className="cursor-pointer hover:text-blue-500 transition-colors duration-300 hover:underline">
+          Research Work
+        </a>
+        <a onClick={() => scrollToSection(refs.activitiesRef)} className="cursor-pointer hover:text-blue-500 transition-colors duration-300 hover:underline">
+          Activities
+        </a>
+        <a onClick={() => scrollToSection(refs.awardsRef)} className="cursor-pointer hover:text-blue-500 transition-colors duration-300 hover:underline">
+          Awards
+        </a>
       </div>
 
       {/* Mobile Menu with Animation */}
@@ -126,16 +143,33 @@ const Navbar = ({ scrollToSection, refs }) => {
               exit="exit"
               variants={menuVariants}
             >
-              <a href="/" onClick={() => setIsOpen(false)} className="hover:text-blue-400">Home</a>
-              <a onClick={() => { scrollToSection(refs.techRef); setIsOpen(false); }} className="cursor-pointer hover:text-blue-400">Skills</a>
-              <a onClick={() => { scrollToSection(refs.projectsRef); setIsOpen(false); }} className="cursor-pointer hover:text-blue-400">Projects</a>
-              <a onClick={() => { scrollToSection(refs.educationRef); setIsOpen(false); }} className="cursor-pointer hover:text-blue-400">Education</a>
-              <a onClick={() => { scrollToSection(refs.experienceRef); setIsOpen(false); }} className="cursor-pointer hover:text-blue-400">Experience</a>
-              <a onClick={() => { scrollToSection(refs.publicationRef); setIsOpen(false); }} className="cursor-pointer hover:text-blue-400">Publication</a>
-              <a onClick={() => { scrollToSection(refs.researchRef); setIsOpen(false); }} className="cursor-pointer hover:text-blue-400">Research Work</a>
-
-              <a onClick={() => { scrollToSection(refs.activitiesRef); setIsOpen(false); }} className="cursor-pointer hover:text-blue-400">Activities</a>
-              <a onClick={() => { scrollToSection(refs.awardsRef); setIsOpen(false); }} className="cursor-pointer hover:text-blue-400">Awards</a>
+              <a href="/" onClick={() => setIsOpen(false)} className="hover:text-blue-400 transition-colors duration-300 hover:underline">
+                Home
+              </a>
+              <a onClick={() => { scrollToSection(refs.techRef); setIsOpen(false); }} className="cursor-pointer hover:text-blue-400 transition-colors duration-300 hover:underline">
+                Skills
+              </a>
+              <a onClick={() => { scrollToSection(refs.projectsRef); setIsOpen(false); }} className="cursor-pointer hover:text-blue-400 transition-colors duration-300 hover:underline">
+                Projects
+              </a>
+              <a onClick={() => { scrollToSection(refs.educationRef); setIsOpen(false); }} className="cursor-pointer hover:text-blue-400 transition-colors duration-300 hover:underline">
+                Education
+              </a>
+              <a onClick={() => { scrollToSection(refs.experienceRef); setIsOpen(false); }} className="cursor-pointer hover:text-blue-400 transition-colors duration-300 hover:underline">
+                Experience
+              </a>
+              <a onClick={() => { scrollToSection(refs.publicationRef); setIsOpen(false); }} className="cursor-pointer hover:text-blue-400 transition-colors duration-300 hover:underline">
+                Publication
+              </a>
+              <a onClick={() => { scrollToSection(refs.researchRef); setIsOpen(false); }} className="cursor-pointer hover:text-blue-400 transition-colors duration-300 hover:underline">
+                Research Work
+              </a>
+              <a onClick={() => { scrollToSection(refs.activitiesRef); setIsOpen(false); }} className="cursor-pointer hover:text-blue-400 transition-colors duration-300 hover:underline">
+                Activities
+              </a>
+              <a onClick={() => { scrollToSection(refs.awardsRef); setIsOpen(false); }} className="cursor-pointer hover:text-blue-400 transition-colors duration-300 hover:underline">
+                Awards
+              </a>
             </motion.div>
           </>
         )}
