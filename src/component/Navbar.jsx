@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { FaGithub, FaEnvelope, FaWhatsapp } from 'react-icons/fa';
 import { motion, AnimatePresence } from 'framer-motion';
+import { SiOrcid } from 'react-icons/si';
 
 const Navbar = ({ scrollToSection, refs }) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -45,39 +46,65 @@ const Navbar = ({ scrollToSection, refs }) => {
 
       {/* Social Media Icons */}
       <div className="flex items-center gap-6 text-3xl">
-        <motion.a
-          href="https://github.com/hoque21"
-          target="_blank"
-          rel="noopener noreferrer"
-          aria-label="GitHub"
-          whileHover={{ scale: 1.3, rotate: 10, transition: { duration: 0.2 } }}
-          whileTap={{ scale: 0.9, rotate: -10, transition: { duration: 0.1 } }}
-        >
-          <FaGithub />
-        </motion.a>
+  <motion.a
+    href="https://github.com/hoque21"
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label="GitHub"
+    whileHover={{ scale: 1.3, rotate: 10, transition: { duration: 0.2 } }}
+    whileTap={{ scale: 0.9, rotate: -10, transition: { duration: 0.1 } }}
+    className="relative group"
+  >
+    <FaGithub />
+    <span className="absolute top-full left-1/2 transform -translate-x-1/2 mt-2 px-2 py-1 text-sm text-white bg-black rounded opacity-0 group-hover:opacity-100 transition-opacity">
+      GitHub
+    </span>
+  </motion.a>
+  <motion.a
+    href="https://orcid.org/YOUR-ORCID-ID"
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label="ORCID"
+    whileHover={{ scale: 1.3, rotate: 10, transition: { duration: 0.2 } }}
+    whileTap={{ scale: 0.9, rotate: -10, transition: { duration: 0.1 } }}
+    className="relative group"
+  >
+    <SiOrcid />
+    <span className="absolute top-full left-1/2 transform -translate-x-1/2 mt-2 px-2 py-1 text-sm text-white bg-black rounded opacity-0 group-hover:opacity-100 transition-opacity">
+      ORCID
+    </span>
+  </motion.a>
+  <motion.a
+    href="mailto:rafiulhoque21@gmail.com"
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label="Gmail"
+    whileHover={{ scale: 1.3, rotate: 10, transition: { duration: 0.2 } }}
+    whileTap={{ scale: 0.9, rotate: -10, transition: { duration: 0.1 } }}
+    className="relative group"
+  >
+    <FaEnvelope />
+    <span className="absolute top-full left-1/2 transform -translate-x-1/2 mt-2 px-2 py-1 text-sm text-white bg-black rounded opacity-0 group-hover:opacity-100 transition-opacity">
+      Gmail
+    </span>
+  </motion.a>
+  <motion.a
+    href="https://wa.me/8801712075433"
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label="WhatsApp"
+    whileHover={{ scale: 1.3, rotate: 10, transition: { duration: 0.2 } }}
+    whileTap={{ scale: 0.9, rotate: -10, transition: { duration: 0.1 } }}
+    className="relative group"
+  >
+    <FaWhatsapp />
+    <span className="absolute top-full left-1/2 transform -translate-x-1/2 mt-2 px-2 py-1 text-sm text-white bg-black rounded opacity-0 group-hover:opacity-100 transition-opacity">
+      WhatsApp
+    </span>
+  </motion.a>
+</div>
 
-        <motion.a
-          href="mailto:rafiulhoque21@gmail.com"
-          target="_blank"
-          rel="noopener noreferrer"
-          aria-label="Gmail"
-          whileHover={{ scale: 1.3, rotate: 10, transition: { duration: 0.2 } }}
-          whileTap={{ scale: 0.9, rotate: -10, transition: { duration: 0.1 } }}
-        >
-          <FaEnvelope />
-        </motion.a>
 
-        <motion.a
-          href="https://wa.me/8801712075433"
-          target="_blank"
-          rel="noopener noreferrer"
-          aria-label="WhatsApp"
-          whileHover={{ scale: 1.3, rotate: 10, transition: { duration: 0.2 } }}
-          whileTap={{ scale: 0.9, rotate: -10, transition: { duration: 0.1 } }}
-        >
-          <FaWhatsapp />
-        </motion.a>
-      </div>
 
       {/* Hamburger Menu for Mobile */}
       <div className="lg:hidden z-20">
@@ -92,31 +119,31 @@ const Navbar = ({ scrollToSection, refs }) => {
 
       {/* Navigation Links for Desktop */}
       <div className="hidden lg:flex gap-8 text-lg">
-        <a href="/" className="hover:text-blue-500 transition-colors duration-300 hover:underline">
+        <a href="/" className=" transition-colors duration-300 ">
           Home
         </a>
-        <a onClick={() => scrollToSection(refs.techRef)} className="cursor-pointer hover:text-blue-500 transition-colors duration-300 hover:underline">
+        <a onClick={() => scrollToSection(refs.techRef)} className="cursor-pointer  transition-colors duration-300 hover:underline">
           Skills
         </a>
-        <a onClick={() => scrollToSection(refs.projectsRef)} className="cursor-pointer hover:text-blue-500 transition-colors duration-300 hover:underline">
+        <a onClick={() => scrollToSection(refs.projectsRef)} className="cursor-pointer  transition-colors duration-300 hover:underline">
           Projects
         </a>
-        <a onClick={() => scrollToSection(refs.educationRef)} className="cursor-pointer hover:text-blue-500 transition-colors duration-300 hover:underline">
+        <a onClick={() => scrollToSection(refs.educationRef)} className="cursor-pointer  transition-colors duration-300 hover:underline">
           Education
         </a>
-        <a onClick={() => scrollToSection(refs.experienceRef)} className="cursor-pointer hover:text-blue-500 transition-colors duration-300 hover:underline">
+        <a onClick={() => scrollToSection(refs.experienceRef)} className="cursor-pointer  transition-colors duration-300 hover:underline">
           Experience
         </a>
-        <a onClick={() => scrollToSection(refs.publicationRef)} className="cursor-pointer hover:text-blue-500 transition-colors duration-300 hover:underline">
+        <a onClick={() => scrollToSection(refs.publicationRef)} className="cursor-pointer  transition-colors duration-300 hover:underline">
           Publication
         </a>
-        <a onClick={() => scrollToSection(refs.researchRef)} className="cursor-pointer hover:text-blue-500 transition-colors duration-300 hover:underline">
+        <a onClick={() => scrollToSection(refs.researchRef)} className="cursor-pointer  transition-colors duration-300 hover:underline">
           Research Work
         </a>
-        <a onClick={() => scrollToSection(refs.activitiesRef)} className="cursor-pointer hover:text-blue-500 transition-colors duration-300 hover:underline">
+        <a onClick={() => scrollToSection(refs.activitiesRef)} className="cursor-pointer  transition-colors duration-300 hover:underline">
           Activities
         </a>
-        <a onClick={() => scrollToSection(refs.awardsRef)} className="cursor-pointer hover:text-blue-500 transition-colors duration-300 hover:underline">
+        <a onClick={() => scrollToSection(refs.awardsRef)} className="cursor-pointer  transition-colors duration-300 hover:underline">
           Awards
         </a>
       </div>

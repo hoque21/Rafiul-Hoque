@@ -36,22 +36,36 @@ const Publication = () => {
               {/* Publication Title */}
               <h3 className="text-xl font-semibold">{pub.title}</h3>
               <p className="mt-2">
-                <strong>Journal Name:</strong> 
+                <strong>Journal Name : </strong> 
                 <a 
                   href={pub.journalLink} // Link to the journal
                   target="_blank" // Opens the link in a new tab
                   rel="noopener noreferrer" // Security measures for external links
-                  className="text-blue-500 hover:underline" // Styling for the link
+                  className // Styling for the link
                 >
-                  {pub.journalName}
+                  {pub.journalName || "N/A"}
                 </a>
+                {pub.doi && ( // Display DOI only if it exists
+                <p className="mt-2">
+                  <strong>DOI : </strong> 
+                  <a
+                    href={`https://doi.org/${pub.doi}`} // Construct DOI link
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className=""
+                  >
+                    {pub.doi}
+                  </a>
+                </p>
+              )}
               </p>
               <p className="mt-2">
-                <strong>Technologies Used:</strong> {pub.technologies.join(", ")} {/* Technologies */}
+                <strong>Technologies Used : </strong> {pub.technologies.join(", ")} {/* Technologies */}
               </p>
-              <p className="mt-2 font-semibold">
-                <strong>Status:</strong> {pub.status} {/* Journal name */}
+              <p className="mt-2">
+                <strong>Status : </strong> {pub.status} {/* Publication status */}
               </p>
+             
             </motion.div>
           );
         })}

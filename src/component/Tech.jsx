@@ -6,6 +6,7 @@ import { SiJavascript, SiTailwindcss, SiJira, SiSqlite } from 'react-icons/si';
 import { MdCloud, MdOutlineApi } from 'react-icons/md'; // Import the API icon for Postman
 import { GiBrain } from 'react-icons/gi'; // Brain icon for NLP
 import { BiCamera } from 'react-icons/bi'; // Camera icon for Computer Vision
+import { AiOutlineBarChart } from 'react-icons/ai'; // Placeholder icon for SPSS
 
 const Tech = () => {
   const techStackLine1 = [
@@ -25,6 +26,7 @@ const Tech = () => {
     { icon: <MdCloud className='text-7xl text-orange-500' />, label: 'Firebase' },
     { icon: <SiJira className='text-7xl' style={{ color: '#0052CC' }} />, label: 'Jira' },
     { icon: <MdOutlineApi className='text-7xl' style={{ color: '#6B7280' }} />, label: 'Postman' },
+    { icon: <AiOutlineBarChart className='text-7xl' style={{ color: '#4A90E2' }} />, label: 'SPSS' }, // SPSS added here
   ];
 
   return (
@@ -70,9 +72,6 @@ const Tech = () => {
           </motion.div>
         ))}
       </div>
-
-      {/* Third Line of Tech Icons */}
-     
     </div>
   );
 };

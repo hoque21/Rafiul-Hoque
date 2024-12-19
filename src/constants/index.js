@@ -14,44 +14,9 @@ export const EXPERIENCES = [
     company: "MMIT Soft LTD.",
     description: `Led a team in developing and maintaining web applications using JavaScript, React.js, and Node.js.`,
     technologies: ["Javascript", "React.js", "Node.js", "mySql","Tailwind"],
-    certificate: "https://drive.google.com/file/d/1tCvKPyC2yuUT4CWhfvTkzzh1lZLyp_wH/view?usp=drive_link",
+    certificate: "https://drive.google.com/drive/u/0/folders/1VPI724ca35prqPZHBoayqqu7HED1Q40q",
   },
 ];
-
-// export const PROJECTS = [
-//   {
-//     title: "E-Commerce Website",
-//     image: project1,
-//     description:
-//       "A fully functional e-commerce website with features like product listing, shopping cart, and user authentication.",
-//     technologies: ["HTML", "CSS", "React", "Node.js", "MongoDB"],
-//     link: "https://example.com/e-commerce", // Add the actual link here
-//   },
-//   {
-//     title: "Task Management App",
-//     image: project2,
-//     description:
-//       "An application for managing tasks and projects, with features such as task creation, assignment, and progress tracking.",
-//     technologies: ["HTML", "CSS", "Angular", "Firebase"],
-//     link: "https://example.com/task-management", // Add the actual link here
-//   },
-//   {
-//     title: "Portfolio Website",
-//     image: project3,
-//     description:
-//       "A personal portfolio website showcasing projects, skills, and contact information.",
-//     technologies: ["HTML", "CSS", "React", "Tailwind"],
-//     link: "https://rafiulhoque.netlify.app/", // Add the actual link here
-//   },
-//   {
-//     title: "Portfolio Website",
-//     image: project3,
-//     description:
-//       "A personal portfolio website showcasing projects, skills, and contact information.",
-//     technologies: ["HTML", "CSS", "React", "Tailwind"],
-//     link: "https://rafiulhoque.netlify.app/", // Add the actual link here
-//   },
-// ];
 
 
 export const CONTACT = {
@@ -66,25 +31,35 @@ export const PUBLICATION = [
   {
     title: `Depressive and Suicidal Text-Based Sentiment Analysis In Bangla Using Deep Learning Models.`,
     journalName: 'Business & IT',
-    journalLink: "https://bit.fsv.cvut.cz/",
+    journalLink: "https://bit.fsv.cvut.cz/doi/bit.2024.02.13.html",
+    doi: "https://doi.org/10.14311/bit.2024.02.13",
     technologies: ["Python", "Natural Language Processing Toolkit"],
-    status: 'Accepted',
+    status: 'Published',
   },
   {
     title: `Transformer-Based Sentiment Analysis for Classification Non-depressive and Suicidal Thought in Bangla Text.`,
-   
     journalLink: "https://www.cell.com/heliyon/home",
+    // Replace with actual DOI if available
     technologies: ["Python", "Natural Language Processing Toolkit"],
     status: 'Under review',
   },
   {
     title: `Estimation of Postpartum Morbidities and Risk Factors of Women Presented for Postpartum Visit at a MOU, eThekwini, South Africa`,
-    journalName: 'Southern African Journal of Public Health', // Placeholder if journal is not known yet
-    journalLink: 'https://samajournals.co.za/index.php/sajph', // Leave blank or add the journal's link if available
+    journalName: 'Southern African Journal of Public Health',
+    journalLink: 'https://samajournals.co.za/index.php/sajph',
     technologies: ["Data Analysis", "Epidemiology"],
-    status: 'Under review', // Adjust status as needed
+    status: 'Under review',
+  },
+  {
+    title: `The Prevalence and Risk Factors for Postpartum Depression in eThekwini District of KwaZulu-Natal Province of South Africa`,
+    journalName: 'European Journal of Medical and Health Sciences',
+    journalLink: 'https://www.ej-med.org/index.php/ejmed',
+    technologies: ["Data Analysis", "Epidemiology"],
+    status: 'Under review',
   }
 ];
+
+
 
 // Example of updated publication data
 
