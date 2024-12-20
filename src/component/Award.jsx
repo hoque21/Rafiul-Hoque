@@ -9,14 +9,49 @@ const Award = () => {
   // Sample awards data
   const awardsData = [
     {
+      title: "Career Webinar Participation",
+      description: "Participated in a career development webinar focused on job application tips and professional skills.",
+      topic:["Professional Skills"],
+      date: "16/08/2024",
+      certificate: "" // No certificate link provided
+    },
+    {
+      title: "Graphic Design Course",
+      description: "Completed a 3-month Graphic Design Course at Good Approach and received a certificate of achievement.",
+      topic:["Graphic Design"],
+      date: "",
+      certificate: "" // No certificate link provided
+    },
+    {
       title: "Creative Talent Search Competition",
       description: "Awarded 'Best Talent of the Year' in 2014 for outstanding performance in Mathematics and Computer at the Upazila-level Creative Talent Search Competition. Recognized for excellence among school-level students.",
-      topic: ["Mathematics & Computer"],
-      certificate: "https://drive.google.com/file/d/1Sray2NxhvUk7_pZ_pAvvvDUcIPUTZHiM/view?usp=drive_link" // Using the correct path for the certificate
+      topic:["Mathematics & Computer"],
+      date: "10/05/2014",
+      certificate: "https://drive.google.com/file/d/1Sray2NxhvUk7_pZ_pAvvvDUcIPUTZHiM/view?usp=drive_link"
     },
-    // Add more awards as needed
+    {
+      title: "Deep Learning for Beginners Course",
+      description: "Completed a foundational course in Deep Learning, gaining insights into AI and machine learning principles.",
+      topic:["Deep Learning", "AI", "Machine Learning"],
+      date: "20/12/2024",
+      certificate: "" // No certificate link provided
+    },
+    {
+      title: "General Grade Scholarship Award",
+      description: "Awarded the General Grade Scholarship for outstanding academic performance in the 2005 scholarship examination organized by the Rajbari Zila Kindergarten Association.",
+      topic:["Academic Excellence"],
+      date: "2009",
+      certificate: "" // No certificate link provided
+    },
+    {
+      title: "General Grade Scholarship Award",
+      description: "Earned the General Grade Scholarship for exceptional academic achievement in the 2005 scholarship examination organized by the Bangladesh Kindergarten Owners Association. This award acknowledged my dedication to studies and exceptional performance during my early educational years.",
+      topic:[ "Academic Excellence"],
+      date: "2008",
+      certificate: "" // No certificate link provided
+    }
   ];
-
+  
   // Function to handle download directly
   const handleDownload = (certificate) => {
     window.open(certificate, '_blank', 'noopener,noreferrer'); // Open the certificate in a new tab
@@ -57,7 +92,7 @@ const Award = () => {
               {/* Award Title */}
               <h3 className="text-xl font-semibold">{award.title}</h3>
               <p className="mt-2">
-                <strong>Description:</strong> {award.description}
+                <strong>Description :</strong> {award.description}
               </p>
 
               {/* Topics and Button Section */}
@@ -70,11 +105,11 @@ const Award = () => {
                   animate={isTopicsInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }} // Animate based on scroll
                   transition={{ duration: 0.5, delay: 0.1 }} // Smooth animation
                 >
-                  <strong>Topics:</strong>
+                  <strong>Topics :</strong>
                   {award.topic && award.topic.map((tech, idx) => (
                     <motion.li
                       key={idx}
-                      className="ml-2 list-disc"
+                      className="ml-2" // Removed 'list-disc' to remove the dot icon
                       initial={{ opacity: 0, scale: 0.9 }} // Start hidden and scaled down
                       animate={isTopicsInView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.9 }} // Animate based on scroll
                       transition={{ duration: 0.5, delay: idx * 0.1 }} // Staggered effect for each topic

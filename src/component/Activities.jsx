@@ -32,12 +32,12 @@ const ACTIVITIES = [
     technologies: ["Photography", "Artistic Expression", "Visual Storytelling"],
     certificate: "https://drive.google.com/file/d/1aad6oNGWEsqzWQVd_KnV5Ac6pb8Wfn9F/view?usp=drive_link",
   },
-  {
-    title: "Graphic Design Course",
-    description: "Received a certificate of achievement for the successful completion of a 3-month Graphic Design Course at Good Approach.",
-    technologies: ["Graphic Design", "Digital Art", "Creativity"],
-    certificate: "https://drive.google.com/file/d/1ITTXMbjnS9cHfcQgYY-TF4EH4SfGpWZX/view?usp=drive_link",
-  },
+  // {
+  //   title: "Graphic Design Course",
+  //   description: "Received a certificate of achievement for the successful completion of a 3-month Graphic Design Course at Good Approach.",
+  //   technologies: ["Graphic Design", "Digital Art", "Creativity"],
+  //   certificate: "https://drive.google.com/file/d/1ITTXMbjnS9cHfcQgYY-TF4EH4SfGpWZX/view?usp=drive_link",
+  // },
   {
     title: "Career Webinar Participation",
     description: "Successfully participated in the webinar titled 'Job এর জন্য নিজেকে কিভাবে Shortlist করবেন?'.",

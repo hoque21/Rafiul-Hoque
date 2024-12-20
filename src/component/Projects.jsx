@@ -1,8 +1,18 @@
-import React, { useRef, useState } from 'react';
+import  { useRef, useState } from 'react';
 import { motion, useInView } from 'framer-motion';
 import project1 from "../assets/projects/project-1.webp";
 import project3 from "../assets/projects/project-3.webp";
 import project4 from "../assets/projects/project-4.webp";
+import project5 from "../assets/projects/Doctor.png"
+import project6 from "../assets/projects/E-commerce.png"
+import project7 from "../assets/projects/Expense.png"
+import project8 from "../assets/projects/Qr code.png"
+import project9 from "../assets/projects/School Management.png"
+import project10 from "../assets/projects/Diabetics.jpeg"
+import project11 from "../assets/projects/fake.jpeg"
+import project12 from "../assets/projects/Heart.jpg"
+import project13 from "../assets/projects/Image.jpeg"
+
 
 const PROJECTS = [
   {
@@ -13,13 +23,21 @@ const PROJECTS = [
     link: "https://rafiulhoque.netlify.app/",
     image: project3,
   },
+   {
+    title: "Image Caption Generator",
+    description:
+      "A machine learning model that generates captions for images based on their content using deep learning techniques.",
+    technologies: ["Python","TensorFlow", "Deep Learning", "Computer Vision"],
+    link: "https://github.com/hoque21/Image-Caption-Generator",
+    image: project13,
+  },
   {
     title: "E-Commerce Website",
     description:
       "A fully functional e-commerce website with features like product listing, shopping cart, and user authentication.",
     technologies: ["HTML", "CSS", "React", "Nodejs", "MongoDB"],
     link: "https://github.com/hoque21/Bazar-E-commerce-Site-",
-    image: project1,
+    image: project6,
   },
   {
     title: "Fake News Detection",
@@ -27,7 +45,7 @@ const PROJECTS = [
       "A machine learning application that detects fake news articles by analyzing their content and sources.",
     technologies: ["Python", "Flask", "Machine Learning", "Natural Language Processing"],
     link: "https://github.com/hoque21/Fake-news-Detection",
-    image: project1,
+    image: project11,
   },
   {
     title: "Heart Disease Prediction",
@@ -35,7 +53,7 @@ const PROJECTS = [
       "An AI-based application that predicts the likelihood of heart disease in patients based on medical data.",
     technologies: ["Python", "TensorFlow", "Machine Learning"],
     link: "https://github.com/hoque21/Heart-Disease-Prediction",
-    image: project1,
+    image: project12,
   },
   {
     title: "Diabetes Prediction",
@@ -43,7 +61,7 @@ const PROJECTS = [
       "An application that uses artificial intelligence to predict the risk of diabetes in individuals based on health metrics.",
     technologies: ["Python", "Scikit-Learn", "Machine Learning"],
     link: "https://github.com/hoque21/Diabetes_Prediction",
-    image: project1,
+    image: project10,
   },
   {
     title: "Doctor Appointment System",
@@ -51,7 +69,7 @@ const PROJECTS = [
       "A web application for scheduling doctor appointments, with user authentication and real-time notifications.",
     technologies: ["HTML", "CSS", "Tailwind", "JavaScript", "React", "Firebase"],
     link: "https://github.com/hoque21/Doctors-Appointment-Project-Client-site-",
-    image: project4,
+    image: project5,
   },
   {
     title: "School Management System",
@@ -59,7 +77,7 @@ const PROJECTS = [
       "A comprehensive web application for managing student records, classes, and attendance.",
     technologies: ["HTML", "CSS", "Tailwind"],
     link: "https://cantschoolmanagement.netlify.app/",
-    image: project4,
+    image: project9,
   },
   {
     title: "QR Code Generator",
@@ -67,7 +85,7 @@ const PROJECTS = [
       "A simple web application that generates QR codes for URLs or text inputs using JavaScript and HTML.",
     technologies: ["HTML", "CSS", "JavaScript", "Tailwind"],
     link: "https://codegenerator001.netlify.app",
-    image: project1,
+    image: project8,
   },
   {
     title: "Expense Tracker",
@@ -75,7 +93,7 @@ const PROJECTS = [
       "An application that helps users track their expenses, manage budgets, and analyze spending patterns.",
     technologies: ["HTML", "CSS", "JavaScript", "React", "Node.js"],
     link: "https://github.com/hoque21/Expense-Tracker",
-    image: project1,
+    image: project7,
   },
 ];
 
