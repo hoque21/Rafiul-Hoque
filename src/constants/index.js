@@ -33,28 +33,28 @@ export const PUBLICATION = [
     journalName: 'Business & IT',
     journalLink: "https://bit.fsv.cvut.cz/doi/bit.2024.02.13.html",
     doi: "https://doi.org/10.14311/bit.2024.02.13",
-    // technologies: ["Python", "Natural Language Processing Toolkit"],
+    technologies: ["Python", "Natural Language Processing Toolkit"],
     status: 'Published',
   },
   {
     title: `Transformer-Based Sentiment Analysis for Classification Non-depressive and Suicidal Thought in Bangla Text.`,
     journalLink: "https://www.cell.com/heliyon/home",
     // Replace with actual DOI if available
-    // technologies: ["Python", "Natural Language Processing Toolkit"],
+    technologies: ["Python", "Natural Language Processing Toolkit"],
     status: 'Under review',
   },
   {
     title: `Estimation of Postpartum Morbidities and Risk Factors of Women Presented for Postpartum Visit at a MOU, eThekwini, South Africa`,
     journalName: 'Southern African Journal of Public Health',
     journalLink: 'https://samajournals.co.za/index.php/sajph',
-    // technologies: ["Data Analysis", "Epidemiology"],
+    technologies: ["Data Analysis", "Epidemiology"],
     status: 'Under review',
   },
   {
     title: `Prevalence and Risk Factors for Postpartum Depression in eThekwini District of KwaZulu-Natal Province of South Africa`,
     journalName: 'European Journal of Medical and Health Sciences',
     journalLink: 'https://www.ej-med.org/index.php/ejmed',
-    // technologies: ["Data Analysis"],
+    technologies: ["Data Analysis"],
     status: 'Accepted',
   },
   {
@@ -62,7 +62,7 @@ export const PUBLICATION = [
 stetric Unit in South Africa, 2018–2022`,
     journalName: 'European Journal of Medical and Health Sciences',
     journalLink: 'https://www.ej-med.org/index.php/ejmed',
-    // technologies: ["Data Analysis"],
+    technologies: ["Data Analysis"],
     status: 'Accepted',
   }
 ];
