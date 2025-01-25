@@ -55,7 +55,7 @@ export const PUBLICATION = [
     journalName: 'European Journal of Medical and Health Sciences',
     journalLink: 'https://www.ej-med.org/index.php/ejmed',
     technologies: ["Data Analysis"],
-    status: 'Accepted',
+    status: 'Under Review',
   },
   {
     title: `Trends and Factors for Adverse Pregnancy Outcomes of Low-risk Pregnancy from a Midwife Ob-
