@@ -58,12 +58,16 @@ export const PUBLICATION = [
     status: 'Under Review',
   },
   {
-    title: `Trends and Factors for Adverse Pregnancy Outcomes of Low-risk Pregnancy from a Midwife Ob-
-stetric Unit in South Africa, 2018–2022`,
+    title: `Trends and Factors for Adverse Pregnancy Outcomes of Low-risk Pregnancy from a Midwife Obstetric Unit in South Africa, 2018–2022`,
     journalName: 'European Journal of Medical and Health Sciences',
     journalLink: 'https://www.ej-med.org/index.php/ejmed',
     technologies: ["Data Analysis"],
     status: 'Accepted',
+  },
+  {
+    title: `The Risk Factors for Neonatal Deaths: An Audit of Neonatal Care - A Retrospective Cross-sectional Study`,
+    technologies: ["Data Analysis", "Public Health"],
+    status: 'Under Review',
   }
 ];
 
