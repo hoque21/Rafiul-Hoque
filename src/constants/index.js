@@ -54,6 +54,7 @@ export const PUBLICATION = [
     title: `Prevalence and Risk Factors for Postpartum Depression in eThekwini District of KwaZulu-Natal Province of South Africa`,
     journalName: 'European Journal of Medical and Health Sciences',
     journalLink: 'https://www.ej-med.org/index.php/ejmed',
+    doi : 'https://doi.org/10.24018/ejmed.2025.7.1.2248',
     technologies: ["Data Analysis"],
     status: 'Under Review',
   },
