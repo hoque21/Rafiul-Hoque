@@ -48,7 +48,7 @@ export const PUBLICATION = [
     journalName: 'Southern African Journal of Public Health',
     journalLink: 'https://samajournals.co.za/index.php/sajph',
     technologies: ["Data Analysis", "Epidemiology"],
-    status: 'Under review',
+    status: 'Published',
   },
   {
     title: `Prevalence and Risk Factors for Postpartum Depression in eThekwini District of KwaZulu-Natal Province of South Africa`,
