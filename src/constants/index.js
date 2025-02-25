@@ -66,8 +66,9 @@ export const PUBLICATION = [
   },
   {
     title: `The Risk Factors for Neonatal Deaths: An Audit of Neonatal Care - A Retrospective Cross-sectional Study`,
+    journalName: 'European Journal of Medical and Health Sciences',
     technologies: ["Data Analysis", "Public Health"],
-    status: 'Under Review',
+    status: 'Accepted',
   }
 ];
 
