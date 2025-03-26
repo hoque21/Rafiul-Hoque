@@ -7,6 +7,7 @@ import { MdCloud, MdOutlineApi } from 'react-icons/md'; // Import the API icon f
 import { GiBrain } from 'react-icons/gi'; // Brain icon for NLP
 import { BiCamera } from 'react-icons/bi'; // Camera icon for Computer Vision
 import { AiOutlineBarChart } from 'react-icons/ai'; // Placeholder icon for SPSS
+import { IoLogoEuro } from 'react-icons/io'; // Placeholder icon for Power BI (or you can use any other icon)
 
 const Tech = () => {
   const techStackLine1 = [
@@ -27,6 +28,7 @@ const Tech = () => {
     { icon: <SiJira className='text-7xl' style={{ color: '#0052CC' }} />, label: 'Jira' },
     { icon: <MdOutlineApi className='text-7xl' style={{ color: '#6B7280' }} />, label: 'Postman' },
     { icon: <AiOutlineBarChart className='text-7xl' style={{ color: '#4A90E2' }} />, label: 'SPSS' }, // SPSS added here
+    { icon: <IoLogoEuro className='text-7xl' style={{ color: '#F2C500' }} />, label: 'Power BI' }, // Added Power BI
   ];
 
   return (

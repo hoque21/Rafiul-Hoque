@@ -87,7 +87,7 @@ const Experience = () => {
                 </motion.div>
 
                 {/* Certificate Download Button */}
-                {experience.certificate && (
+                {/* {experience.certificate && (
                   <motion.button
                     onClick={() => handleDownloadClick(experience.certificate)}
                     className='mt-4 inline-block bg-[#00000080] rounded-full px-4 py-2 text-sm text-white border border-[#ffffff33] transition duration-300 ease-in-out hover:bg-[#00000099] hover:text-[#ffffff] hover:border-[#ffffff]'
@@ -99,7 +99,7 @@ const Experience = () => {
                   >
                     Download Certificate
                   </motion.button>
-                )}
+                )} */}
               </div>
             </motion.div>
           );

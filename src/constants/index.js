@@ -35,13 +35,23 @@ export const PUBLICATION = [
     doi: "https://doi.org/10.14311/bit.2024.02.13",
     technologies: ["Python", "Natural Language Processing Toolkit"],
     status: 'Published',
+    authors: [
+      "**Rafiul Hoque**", "Md. Samiul Islam", "Sagor Sarkar", 
+      "Sultana Umme Habiba", "Md. Moshiur Rahman", 
+      "Md. Rajibul Palas", "Muhammad Hoque"
+    ],
+    year: 2024
   },
   {
     title: `Transformer-Based Sentiment Analysis for Classification Non-depressive and Suicidal Thought in Bangla Text.`,
     journalLink: "https://www.cell.com/heliyon/home",
-    // Replace with actual DOI if available
     technologies: ["Python", "Natural Language Processing Toolkit"],
     status: 'Under review',
+    authors: [
+      "Md. Samiul Islam", "**Rafiul Hoque**", "Sagor Sarkar", 
+      "Md. Moshiur Rahman", "Md. Rajibul Palas", "Muhammad Hoque"
+    ],
+    year: 2025
   },
   {
     title: `Estimation of Postpartum Morbidities and Risk Factors of Women Presented for Postpartum Visit at a MOU, eThekwini, South Africa`,
@@ -49,14 +59,20 @@ export const PUBLICATION = [
     journalLink: 'https://samajournals.co.za/index.php/sajph',
     technologies: ["Data Analysis", "Epidemiology"],
     status: 'Under review',
+    authors: ["Monjurul Hoque", "Dr. Buckus", "Maariyah Hoque", "**Rafiul Hoque**"],
+    year: 2025
   },
   {
     title: `Prevalence and Risk Factors for Postpartum Depression in eThekwini District of KwaZulu-Natal Province of South Africa`,
     journalName: 'European Journal of Medical and Health Sciences',
     journalLink: 'https://www.ej-med.org/index.php/ejmed',
-    doi : 'https://doi.org/10.24018/ejmed.2025.7.1.2248',
+    doi: 'https://doi.org/10.24018/ejmed.2025.7.1.2248',
     technologies: ["Data Analysis"],
     status: 'Published',
+    authors: [
+      "Akm Monjurul Hoque", "Maariyah Hoque", "**Rafiul Hoque**", "Somaya Buckus"
+    ],
+    year: 2025
   },
   {
     title: `Trends and Factors for Adverse Pregnancy Outcomes of Low-risk Pregnancy from a Midwife Obstetric Unit in South Africa, 2018–2022`,
@@ -64,14 +80,34 @@ export const PUBLICATION = [
     journalLink: 'https://www.ej-med.org/index.php/ejmed',
     technologies: ["Data Analysis"],
     status: 'Accepted',
+    authors: [
+      "Akm Monjurul Hoque", "Maariyah Hoque", "**Rafiul Hoque**", "Somaya Buckus"
+    ],
+    year: 2025
   },
   {
     title: `The Risk Factors for Neonatal Deaths: An Audit of Neonatal Care - A Retrospective Cross-sectional Study`,
     journalName: 'European Journal of Medical and Health Sciences',
     technologies: ["Data Analysis", "Public Health"],
     status: 'Accepted',
+    authors: [
+      "Akm Monjurul Hoque", "Maariyah Hoque", "**Rafiul Hoque**", 
+      "Mir Anwar", "Somaya Buckus"
+    ],
+    year: 2025
+  },
+  {
+    title: `Trends and Risk Factors for Low-Birth-Weight and Preterm Deliveries Between 2018–2022 in a PHC Setting of South Africa`,
+    journalName: 'European Journal of Clinical Medicine',
+    technologies: ["Data Analysis", "Public Health"],
+    status: 'Accepted',
+    authors: [
+      "Akm Monjurul Hoque", "Maariyah Hoque", "**Rafiul Hoque**", "Somaya Buckus"
+    ],
+    year: 2025
   }
 ];
+
 
 
 
@@ -130,19 +166,27 @@ export const EDUCATION = [
 // Education Reference data array
 export const EDUCATION_REFERENCES = [
   {
+    name: "Prof. Dr. Md. Saiful Azad",
+    position: "Professor and Dean",
+    institution: "Faculty of Science and Engineering, Green University of Bangladesh",
+    contact: "dean@fse.green.edu.bd",
+    relationship: "Professor and Dean",
+  },
+  {
     name: "Mohammad Ehsan Shahmi Chowdhury",
-    position: "Assistant Professor of Computer Science",
+    position: "Assistant Professor",
     institution: "Green University Of Bangladesh",
     contact: "ehsan@cse.green.edu.bd",
     relationship: "Academic Advisor",
   },
-  {
-    name: "Md. Moshiur Rahman",
-    position: "Lecturer of Computer Science",
-    institution: "Bangabandhu Sheikh Mujibur Rahman Digital University",
-    contact: "moshiur0001@bdu.ac.bd",
-    relationship: "Research Supervisor",
-  },
+  // {
+  //   name: "Md. Moshiur Rahman",
+  //   position: "Lecturer of Computer Science",
+  //   institution: "Bangabandhu Sheikh Mujibur Rahman Digital University",
+  //   contact: "moshiur0001@bdu.ac.bd",
+  //   relationship: "Research Supervisor",
+  // },
+
   
   
   

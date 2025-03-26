@@ -36,36 +36,45 @@ const Publication = () => {
               {/* Publication Title */}
               <h3 className="text-xl font-semibold">{pub.title}</h3>
               <p className="mt-2">
-                <strong>Journal Name : </strong> 
+                <strong>Journal Name: </strong> 
                 <a 
                   href={pub.journalLink} // Link to the journal
                   target="_blank" // Opens the link in a new tab
                   rel="noopener noreferrer" // Security measures for external links
-                  className // Styling for the link
+                  className="text-blue-500 hover:underline"
                 >
                   {pub.journalName || "N/A"}
                 </a>
-                {pub.doi && ( // Display DOI only if it exists
+              </p>
+              
+              {pub.doi && ( // Display DOI only if it exists
                 <p className="mt-2">
-                  <strong>DOI : </strong> 
+                  <strong>DOI: </strong> 
                   <a
                     href={`https://doi.org/${pub.doi}`} // Construct DOI link
                     target="_blank"
                     rel="noopener noreferrer"
-                    className=""
+                    className="text-blue-500 hover:underline"
                   >
                     {pub.doi}
                   </a>
                 </p>
               )}
+
+              <p className="mt-2">
+                <strong>Technologies Used: </strong> {pub.technologies.join(", ")} {/* Technologies */}
               </p>
               <p className="mt-2">
-                <strong>Technologies Used : </strong> {pub.technologies.join(", ")} {/* Technologies */}
+                <strong>Status: </strong> {pub.status} {/* Publication status */}
               </p>
+
+              {/* Highlighting Rafiul Hoque in Bold */}
               <p className="mt-2">
-                <strong>Status : </strong> {pub.status} {/* Publication status */}
+                <strong>Authors: </strong> 
+                {pub.authors.map((author, idx) => 
+                  author === "Rafiul Hoque" ? <span key={idx} className="font-bold">{author}</span> : author
+                ).join(', ').replace(/, ([^,]*)$/, ' and $1')}
               </p>
-             
             </motion.div>
           );
         })}

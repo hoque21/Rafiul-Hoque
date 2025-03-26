@@ -98,7 +98,7 @@ const Activities = () => {
               <p className="mt-2">
                 <strong>Technologies Used:</strong> {activity.technologies.join(", ")}
               </p>
-              <a
+              {/* <a
                 href={activity.certificate}
                 target="_blank"
                 rel="noopener noreferrer"
@@ -106,7 +106,7 @@ const Activities = () => {
                 aria-label={`Download certificate for ${activity.title}`}
               >
                 Download Certificate
-              </a>
+              </a> */}
             </div>
           </motion.div>
         ))}
