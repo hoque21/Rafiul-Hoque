@@ -102,7 +102,9 @@ export const PUBLICATION = [
     title: `Trends and Risk Factors for Low-Birth-Weight and Preterm Deliveries Between 2018–2022 in a PHC Setting of South Africa`,
     journalName: 'European Journal of Clinical Medicine',
     technologies: ["Data Analysis", "Public Health"],
-    status: 'Accepted',
+    doi: " https://doi.org/10.24018/clinicmed.2025.6.1.371",
+    
+    status: 'Published',
     authors: [
       "Akm Monjurul Hoque", "Maariyah Hoque", "**Rafiul Hoque**", "Somaya Buckus"
     ],
