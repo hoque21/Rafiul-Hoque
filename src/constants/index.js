@@ -44,9 +44,11 @@ export const PUBLICATION = [
   },
   {
     title: `Transformer-Based Sentiment Analysis for Classification Non-depressive and Suicidal Thought in Bangla Text.`,
-    journalLink: "https://www.cell.com/heliyon/home",
+    journalName: 'International Journal of Research in Business and Social Science',
+    journalLink: "https://www.ssbfnet.com/ojs/index.php/ijrbs/article/view/4274",
     technologies: ["Python", "Natural Language Processing Toolkit"],
-    status: 'Under review',
+    status: 'Published',
+    doi: 'https://doi.org/10.20525/ijrbs.v14i5.4274',
     authors: [
       "Md. Samiul Islam", "**Rafiul Hoque**", "Sagor Sarkar", 
       "Md. Moshiur Rahman", "Md. Rajibul Palas", "Muhammad Hoque"
