@@ -81,7 +81,6 @@ export const PUBLICATION = [
     journalName: 'European Journal of Medical and Health Sciences',
     journalLink: 'https://www.ej-med.org/index.php/ejmed',
     doi: "http://dx.doi.org/10.24018/ejmed.2025.7.2.2263",
-
     technologies: ["Data Analysis"],
     status: 'Published',
     authors: [

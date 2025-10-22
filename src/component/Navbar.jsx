@@ -61,7 +61,7 @@ const Navbar = ({ scrollToSection, refs }) => {
     </span>
   </motion.a>
   <motion.a
-    href="https://orcid.org/YOUR-ORCID-ID"
+    href="https://orcid.org/0009-0001-1869-785X"
     target="_blank"
     rel="noopener noreferrer"
     aria-label="ORCID"
