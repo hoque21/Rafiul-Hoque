@@ -29,12 +29,12 @@ export const CONTACT = {
 // Example of updated publication data
 export const PUBLICATION = [
   {
-    title: `Depressive and Suicidal Text-Based Sentiment Analysis In Bangla Using Deep Learning Models.`,
-    journalName: 'Business & IT',
+    title: "Depressive and Suicidal Text-Based Sentiment Analysis In Bangla Using Deep Learning Models.",
+    journalName: "Business & IT",
     journalLink: "https://bit.fsv.cvut.cz/doi/bit.2024.02.13.html",
     doi: "https://doi.org/10.14311/bit.2024.02.13",
     technologies: ["Python", "Natural Language Processing Toolkit"],
-    status: 'Published',
+    status: "Published",
     authors: [
       "**Rafiul Hoque**", "Md. Samiul Islam", "Sagor Sarkar", 
       "Sultana Umme Habiba", "Md. Moshiur Rahman", 
@@ -43,12 +43,12 @@ export const PUBLICATION = [
     year: 2024
   },
   {
-    title: `Transformer-Based Sentiment Analysis for Classification Non-depressive and Suicidal Thought in Bangla Text.`,
-    journalName: 'International Journal of Research in Business and Social Science',
+    title: "Transformer-Based Sentiment Analysis for Classification Non-depressive and Suicidal Thought in Bangla Text.",
+    journalName: "International Journal of Research in Business and Social Science",
     journalLink: "https://www.ssbfnet.com/ojs/index.php/ijrbs/article/view/4274",
     technologies: ["Python", "Natural Language Processing Toolkit"],
-    status: 'Published',
-    doi: 'https://doi.org/10.20525/ijrbs.v14i5.4274',
+    status: "Published",
+    doi: "https://doi.org/10.20525/ijrbs.v14i5.4274",
     authors: [
       "Md. Samiul Islam", "**Rafiul Hoque**", "Sagor Sarkar", 
       "Md. Moshiur Rahman", "Md. Rajibul Palas", "Muhammad Hoque"
@@ -56,45 +56,45 @@ export const PUBLICATION = [
     year: 2025
   },
   {
-    title: `Estimation of Postpartum Morbidities and Risk Factors of Women Presented for Postpartum Visit at a MOU, eThekwini, South Africa`,
-    journalName: 'Southern African Journal of Public Health',
-    journalLink: 'https://samajournals.co.za/index.php/sajph',
+    title: "Estimation of Postpartum Morbidities and Risk Factors of Women Presented for Postpartum Visit at a MOU, eThekwini, South Africa",
+    journalName: "Southern African Journal of Public Health",
+    journalLink: "https://samajournals.co.za/index.php/sajph",
     technologies: ["Data Analysis", "Epidemiology"],
-    status: 'Under review',
+    status: "Under review",
     authors: ["Monjurul Hoque", "Dr. Buckus", "Maariyah Hoque", "**Rafiul Hoque**"],
     year: 2025
   },
   {
-    title: `Prevalence and Risk Factors for Postpartum Depression in eThekwini District of KwaZulu-Natal Province of South Africa`,
-    journalName: 'European Journal of Medical and Health Sciences',
-    journalLink: 'https://www.ej-med.org/index.php/ejmed',
-    doi: 'https://doi.org/10.24018/ejmed.2025.7.1.2248',
+    title: "Prevalence and Risk Factors for Postpartum Depression in eThekwini District of KwaZulu-Natal Province of South Africa",
+    journalName: "European Journal of Medical and Health Sciences",
+    journalLink: "https://www.ej-med.org/index.php/ejmed",
+    doi: "https://doi.org/10.24018/ejmed.2025.7.1.2248",
     technologies: ["Data Analysis"],
-    status: 'Published',
+    status: "Published",
     authors: [
       "Akm Monjurul Hoque", "Maariyah Hoque", "**Rafiul Hoque**", "Somaya Buckus"
     ],
     year: 2025
   },
   {
-    title: `Trends and Factors for Adverse Pregnancy Outcomes of Low-risk Pregnancy from a Midwife Obstetric Unit in South Africa, 2018–2022`,
-    journalName: 'European Journal of Medical and Health Sciences',
-    journalLink: 'https://www.ej-med.org/index.php/ejmed',
+    title: "Trends and Factors for Adverse Pregnancy Outcomes of Low-risk Pregnancy from a Midwife Obstetric Unit in South Africa, 2018–2022",
+    journalName: "European Journal of Medical and Health Sciences",
+    journalLink: "https://www.ej-med.org/index.php/ejmed",
     doi: "http://dx.doi.org/10.24018/ejmed.2025.7.2.2263",
     technologies: ["Data Analysis"],
-    status: 'Published',
+    status: "Published",
     authors: [
       "Akm Monjurul Hoque", "Maariyah Hoque", "**Rafiul Hoque**", "Somaya Buckus"
     ],
     year: 2025
   },
   {
-    title: `The Risk Factors for Neonatal Deaths: An Audit of Neonatal Care - A Retrospective Cross-sectional Study`,
-    journalName: 'European Journal of Medical and Health Sciences',
-    journalLink: 'https://www.ej-med.org/index.php/ejmed',
+    title: "The Risk Factors for Neonatal Deaths: An Audit of Neonatal Care - A Retrospective Cross-sectional Study",
+    journalName: "European Journal of Medical and Health Sciences",
+    journalLink: "https://www.ej-med.org/index.php/ejmed",
     doi: "https://www.ej-med.org/index.php/ejmed/article/view/2283",
     technologies: ["Data Analysis", "Public Health"],
-    status: 'Published',
+    status: "Published",
     authors: [
       "Akm Monjurul Hoque", "Maariyah Hoque", "**Rafiul Hoque**", 
       "Mir Anwar", "Somaya Buckus"
@@ -102,31 +102,32 @@ export const PUBLICATION = [
     year: 2025
   },
   {
-    title: `Audit of Unplanned Pregnancy–Prevalence and Risk Factors: Experience from a Community Health Care Facility in Durban, South Africa, 2023`,
-    journalName: 'European Journal of Medical and Health Sciences',
-    journalLink: 'https://www.ej-med.org/index.php/ejmed',
+    title: "Audit of Unplanned Pregnancy–Prevalence and Risk Factors: Experience from a Community Health Care Facility in Durban, South Africa, 2023",
+    journalName: "European Journal of Medical and Health Sciences",
+    journalLink: "https://www.ej-med.org/index.php/ejmed",
     doi: "https://ej-med.org/index.php/ejmed/article/view/2331",
     technologies: ["Data Analysis", "Public Health"],
-    status: 'Published',
+    status: "Published",
     authors: [
       "Akm Monjurul Hoque", "Maariyah Hoque", "Rafiul Hoque", 
       "Mir Anwar", "Abm Mahbub-ul Alam", "Somaya Buckus"
     ],
     year: 2025
-}
+  },
   {
-    title: `Trends and Risk Factors for Low-Birth-Weight and Preterm Deliveries Between 2018–2022 in a PHC Setting of South Africa`,
-    journalName: 'European Journal of Clinical Medicine',
+    title: "Trends and Risk Factors for Low-Birth-Weight and Preterm Deliveries Between 2018–2022 in a PHC Setting of South Africa",
+    journalName: "European Journal of Clinical Medicine",
+    journalLink: "https://www.ej-med.org/index.php/ejmed",
+    doi: "https://doi.org/10.24018/clinicmed.2025.6.1.371",
     technologies: ["Data Analysis", "Public Health"],
-    doi: " https://doi.org/10.24018/clinicmed.2025.6.1.371",
-    
-    status: 'Published',
+    status: "Published",
     authors: [
       "Akm Monjurul Hoque", "Maariyah Hoque", "**Rafiul Hoque**", "Somaya Buckus"
     ],
     year: 2025
   }
 ];
+
 
 
 
@@ -157,7 +158,7 @@ export const EDUCATION = [
     institution: "Green University Of Bangladesh",
     institutionLink: "https://www.green.edu.bd/",
     year: "2020 - 2024",
-    Result:"CGPA : ",
+    // Result:"CGPA : ",
     major:"Machine Learning",
     description: "Focused on software development, data structures and Machine Learning.",
     
@@ -167,7 +168,7 @@ export const EDUCATION = [
     institution: "Government Science College",
     institutionLink: "https://www.gsctd.edu.bd/",
     year: "2017 - 2019",
-    Result:"GPA : ",
+    // Result:"GPA : ",
     major:"Science",
   },
   {
@@ -175,7 +176,7 @@ export const EDUCATION = [
     institution: "Liaquat Ali Smriti School and College",
     institutionLink: "",
     year: "2012 - 2017",
-    Result:"GPA :",
+    // Result:"GPA : ",
     major:"Science",
   },
   
