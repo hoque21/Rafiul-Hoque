@@ -92,14 +92,29 @@ export const PUBLICATION = [
   {
     title: `The Risk Factors for Neonatal Deaths: An Audit of Neonatal Care - A Retrospective Cross-sectional Study`,
     journalName: 'European Journal of Medical and Health Sciences',
+    journalLink: 'https://www.ej-med.org/index.php/ejmed',
+    doi: "https://www.ej-med.org/index.php/ejmed/article/view/2283",
     technologies: ["Data Analysis", "Public Health"],
-    status: 'Accepted',
+    status: 'Published',
     authors: [
       "Akm Monjurul Hoque", "Maariyah Hoque", "**Rafiul Hoque**", 
       "Mir Anwar", "Somaya Buckus"
     ],
     year: 2025
   },
+  {
+    title: `Audit of Unplanned Pregnancy–Prevalence and Risk Factors: Experience from a Community Health Care Facility in Durban, South Africa, 2023`,
+    journalName: 'European Journal of Medical and Health Sciences',
+    journalLink: 'https://www.ej-med.org/index.php/ejmed',
+    doi: "https://ej-med.org/index.php/ejmed/article/view/2331",
+    technologies: ["Data Analysis", "Public Health"],
+    status: 'Published',
+    authors: [
+      "Akm Monjurul Hoque", "Maariyah Hoque", "Rafiul Hoque", 
+      "Mir Anwar", "Abm Mahbub-ul Alam", "Somaya Buckus"
+    ],
+    year: 2025
+}
   {
     title: `Trends and Risk Factors for Low-Birth-Weight and Preterm Deliveries Between 2018–2022 in a PHC Setting of South Africa`,
     journalName: 'European Journal of Clinical Medicine',
@@ -143,7 +158,7 @@ export const EDUCATION = [
     institution: "Green University Of Bangladesh",
     institutionLink: "https://www.green.edu.bd/",
     year: "2020 - 2024",
-    Result:"CGPA : 3.20",
+    Result:"CGPA : ",
     major:"Machine Learning",
     description: "Focused on software development, data structures and Machine Learning.",
     
@@ -153,7 +168,7 @@ export const EDUCATION = [
     institution: "Government Science College",
     institutionLink: "https://www.gsctd.edu.bd/",
     year: "2017 - 2019",
-    Result:"GPA : 4.50",
+    Result:"GPA : ",
     major:"Science",
   },
   {
@@ -161,7 +176,7 @@ export const EDUCATION = [
     institution: "Liaquat Ali Smriti School and College",
     institutionLink: "",
     year: "2012 - 2017",
-    Result:"GPA : 5.00",
+    Result:"GPA :",
     major:"Science",
   },
   
