@@ -56,11 +56,23 @@ export const PUBLICATION = [
     year: 2025
   },
   {
+  title: `Modelling Hypertension among Adults in South Africa through SMOTE-Based Balanced Data with Machine Learning Approaches`,
+  journalName: 'Journal of Health Science and Medical Research',
+  technologies: ["Machine Learning", "Data Analysis", "Public Health"],
+  manuscriptId: "JHSMR-2025-1129",
+  status: 'Under Review',
+  authors: [
+    "Muhammad Hoque", "**Rafiul Hoque**"
+  ],
+  year: 2025
+},
+  {
     title: `Estimation of Postpartum Morbidities and Risk Factors of Women Presented for Postpartum Visit at a MOU, eThekwini, South Africa`,
     journalName: 'Southern African Journal of Public Health',
     journalLink: 'https://samajournals.co.za/index.php/sajph',
+    doi : "https://samajournals.co.za/index.php/sajph/article/view/2807",
     technologies: ["Data Analysis", "Epidemiology"],
-    status: 'Under review',
+    status: 'Published',
     authors: ["Monjurul Hoque", "Dr. Buckus", "Maariyah Hoque", "**Rafiul Hoque**"],
     year: 2025
   },
@@ -93,7 +105,8 @@ export const PUBLICATION = [
     title: `The Risk Factors for Neonatal Deaths: An Audit of Neonatal Care - A Retrospective Cross-sectional Study`,
     journalName: 'European Journal of Medical and Health Sciences',
     technologies: ["Data Analysis", "Public Health"],
-    status: 'Accepted',
+    doi: " http://dx.doi.org/10.24018/ejmed.2025.7.3.2283",
+    status: 'Published',
     authors: [
       "Akm Monjurul Hoque", "Maariyah Hoque", "**Rafiul Hoque**", 
       "Mir Anwar", "Somaya Buckus"
