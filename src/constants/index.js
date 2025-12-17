@@ -46,9 +46,9 @@ export const PUBLICATION = [
     title: "Transformer-Based Sentiment Analysis for Classification Non-depressive and Suicidal Thought in Bangla Text.",
     journalName: "International Journal of Research in Business and Social Science",
     journalLink: "https://www.ssbfnet.com/ojs/index.php/ijrbs/article/view/4274",
+    doi: "https://doi.org/10.20525/ijrbs.v14i5.4274",
     technologies: ["Python", "Natural Language Processing Toolkit"],
     status: "Published",
-    doi: "https://doi.org/10.20525/ijrbs.v14i5.4274",
     authors: [
       "Md. Samiul Islam", "**Rafiul Hoque**", "Sagor Sarkar", 
       "Md. Moshiur Rahman", "Md. Rajibul Palas", "Muhammad Hoque"
@@ -56,34 +56,20 @@ export const PUBLICATION = [
     year: 2025
   },
   {
-  title: `Modelling Hypertension among Adults in South Africa through SMOTE-Based Balanced Data with Machine Learning Approaches`,
-  journalName: 'Journal of Health Science and Medical Research',
-  technologies: ["Machine Learning", "Data Analysis", "Public Health"],
-  manuscriptId: "JHSMR-2025-1129",
-  status: 'Under Review',
-  authors: [
-    "Muhammad Hoque", "**Rafiul Hoque**"
-  ],
-  year: 2025
-},
+    title: "Modelling Hypertension among Adults in South Africa through SMOTE-Based Balanced Data with Machine Learning Approaches",
+    journalName: "Journal of Health Science and Medical Research",
+    technologies: ["Machine Learning", "Data Analysis", "Public Health"],
+    manuscriptId: "JHSMR-2025-1129",
+    status: "Under Review",
+    authors: ["Muhammad Hoque", "**Rafiul Hoque**"],
+    year: 2025
+  },
   {
-    title: `Estimation of Postpartum Morbidities and Risk Factors of Women Presented for Postpartum Visit at a MOU, eThekwini, South Africa`,
-    journalName: 'Southern African Journal of Public Health',
-    journalLink: 'https://samajournals.co.za/index.php/sajph',
-    doi : "https://samajournals.co.za/index.php/sajph/article/view/2807",
-    technologies: ["Data Analysis", "Epidemiology"],
-    status: 'Published',
     title: "Estimation of Postpartum Morbidities and Risk Factors of Women Presented for Postpartum Visit at a MOU, eThekwini, South Africa",
     journalName: "Southern African Journal of Public Health",
     journalLink: "https://samajournals.co.za/index.php/sajph",
     technologies: ["Data Analysis", "Epidemiology"],
-    status: "Under review",
-{
-    title: "Estimation of Postpartum Morbidities and Risk Factors of Women Presented for Postpartum Visit at a MOU, eThekwini, South Africa",
-    journalName: "Southern African Journal of Public Health",
-    journalLink: "https://samajournals.co.za/index.php/sajph",
-    technologies: ["Data Analysis", "Epidemiology"],
-    status: "Under review",
+    status: "Under Review",
     authors: ["Monjurul Hoque", "Dr. Buckus", "Maariyah Hoque", "**Rafiul Hoque**"],
     year: 2025
   },
@@ -94,9 +80,7 @@ export const PUBLICATION = [
     doi: "https://doi.org/10.24018/ejmed.2025.7.1.2248",
     technologies: ["Data Analysis"],
     status: "Published",
-    authors: [
-      "Akm Monjurul Hoque", "Maariyah Hoque", "**Rafiul Hoque**", "Somaya Buckus"
-    ],
+    authors: ["Akm Monjurul Hoque", "Maariyah Hoque", "**Rafiul Hoque**", "Somaya Buckus"],
     year: 2025
   },
   {
@@ -106,28 +90,17 @@ export const PUBLICATION = [
     doi: "http://dx.doi.org/10.24018/ejmed.2025.7.2.2263",
     technologies: ["Data Analysis"],
     status: "Published",
-    authors: [
-      "Akm Monjurul Hoque", "Maariyah Hoque", "**Rafiul Hoque**", "Somaya Buckus"
-    ],
+    authors: ["Akm Monjurul Hoque", "Maariyah Hoque", "**Rafiul Hoque**", "Somaya Buckus"],
     year: 2025
   },
   {
     title: "The Risk Factors for Neonatal Deaths: An Audit of Neonatal Care - A Retrospective Cross-sectional Study",
     journalName: "European Journal of Medical and Health Sciences",
     journalLink: "https://www.ej-med.org/index.php/ejmed",
-    doi: "https://www.ej-med.org/index.php/ejmed/article/view/2283",
+    doi: "http://dx.doi.org/10.24018/ejmed.2025.7.3.2283",
     technologies: ["Data Analysis", "Public Health"],
-
-    doi: " http://dx.doi.org/10.24018/ejmed.2025.7.3.2283",
-    status: 'Published',
-
     status: "Published",
-
-    status: "Published",
-    authors: [
-      "Akm Monjurul Hoque", "Maariyah Hoque", "**Rafiul Hoque**", 
-      "Mir Anwar", "Somaya Buckus"
-    ],
+    authors: ["Akm Monjurul Hoque", "Maariyah Hoque", "**Rafiul Hoque**", "Mir Anwar", "Somaya Buckus"],
     year: 2025
   },
   {
@@ -137,10 +110,7 @@ export const PUBLICATION = [
     doi: "https://ej-med.org/index.php/ejmed/article/view/2331",
     technologies: ["Data Analysis", "Public Health"],
     status: "Published",
-    authors: [
-      "Akm Monjurul Hoque", "Maariyah Hoque", "Rafiul Hoque", 
-      "Mir Anwar", "Abm Mahbub-ul Alam", "Somaya Buckus"
-    ],
+    authors: ["Akm Monjurul Hoque", "Maariyah Hoque", "Rafiul Hoque", "Mir Anwar", "Abm Mahbub-ul Alam", "Somaya Buckus"],
     year: 2025
   },
   {
@@ -150,9 +120,7 @@ export const PUBLICATION = [
     doi: "https://doi.org/10.24018/clinicmed.2025.6.1.371",
     technologies: ["Data Analysis", "Public Health"],
     status: "Published",
-    authors: [
-      "Akm Monjurul Hoque", "Maariyah Hoque", "**Rafiul Hoque**", "Somaya Buckus"
-    ],
+    authors: ["Akm Monjurul Hoque", "Maariyah Hoque", "**Rafiul Hoque**", "Somaya Buckus"],
     year: 2025
   }
 ];
