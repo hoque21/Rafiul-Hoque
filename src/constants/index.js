@@ -19,12 +19,6 @@ export const EXPERIENCES = [
 ];
 
 
-export const CONTACT = {
-  address: "767 Fifth Avenue, New York, NY 10153 ",
-  phoneNo: "+12 4555 666 00 ",
-  email: "me@example.com",
-};
-
 // Define your publication data
 // Example of updated publication data
 export const PUBLICATION = [
@@ -150,6 +144,16 @@ export const RESEARCH = [
 
 // Education data array
 export const EDUCATION = [
+  {
+    degree: "Master of Science in Information Technology",
+    institution: "Universiti Tenaga Nasional",
+    institutionLink: "https://www.uniten.edu.my/",
+    year: "2026- Running",
+    // Result:"CGPA : ",
+    major:"Information Technology",
+    description: "Provides comprehensive training in computing systems, programming technologies, and intelligent algorithms, preparing students to design, analyze, and maintain modern digital solutions.",
+    
+  },
   {
     degree: "Bachelor of Science in Computer Science",
     institution: "Green University Of Bangladesh",

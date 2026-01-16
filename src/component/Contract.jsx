@@ -40,7 +40,7 @@ const Footer = () => {
             rel='noopener noreferrer'
             className='text-blue-400 hover:underline ml-1'
           >
-            659/2, West Kazipara, Mirpur, Dhaka, Bangladesh
+           Putrajaya, Malaysia
           </a>
         </motion.p>
 
